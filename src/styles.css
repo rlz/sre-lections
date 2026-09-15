@@ -44,10 +44,9 @@ a {
     text-decoration: none;
 }
 
-.course-intro,
 .lecture-page__header {
     max-width: 48rem;
-    padding: 7rem 0 5rem;
+    padding: 3.5rem 0;
 }
 
 .eyebrow,
@@ -71,20 +70,64 @@ h1 {
     line-height: 1;
 }
 
-.course-intro h1 {
-    font-size: clamp(2.25rem, 4.5vw, 3.75rem);
-}
-
 .lecture-page__header h1 {
     font-size: clamp(2.25rem, 4.5vw, 3.75rem);
 }
 
-.course-intro > p:last-child,
 .lecture-page__header > p:last-child {
     margin-bottom: 0;
     color: #466176;
     font-size: 1.35rem;
     line-height: 1.5;
+}
+
+.course-author {
+    display: grid;
+    grid-template-columns: minmax(10rem, 14rem) minmax(0, 1fr);
+    align-items: start;
+    gap: 1.75rem;
+    max-width: 48rem;
+    margin-bottom: 3.5rem;
+    padding: 1.75rem 2rem;
+    border-left: 0.3rem solid #147f9a;
+    border-radius: 0 1rem 1rem 0;
+    background: #eaf6f8;
+}
+
+.course-author__photo {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    border-radius: 0.65rem;
+    object-fit: cover;
+}
+
+.course-author h2 {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.course-author p {
+    color: #466176;
+    line-height: 1.5;
+}
+
+.course-author p:last-of-type {
+    margin-bottom: 0;
+}
+
+.course-author__telegram {
+    display: inline-grid;
+    grid-template-columns: 1fr 5.5rem;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    color: #147f9a;
+    font-weight: 800;
+}
+
+.course-author__telegram img {
+    width: 5.5rem;
+    border-radius: 0.35rem;
 }
 
 .lecture-list {
@@ -174,13 +217,22 @@ h1 {
     background: #102235;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 720px) {
     .site-shell {
         width: min(100% - 2rem, 1120px);
     }
 
-    .course-intro,
     .lecture-page__header {
-        padding: 4rem 0 3rem;
+        padding: 2.5rem 0;
+    }
+
+    .course-author {
+        grid-template-columns: 1fr;
+        margin-bottom: 2.5rem;
+        padding: 1.5rem;
+    }
+
+    .course-author__photo {
+        width: min(16rem, 100%);
     }
 }

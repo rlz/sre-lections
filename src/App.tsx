@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Presentation } from 'rlz-web-slides'
+import authorPhoto from './assets/dmitry-maslennikov.png'
+import telegramQr from './assets/telegram-sre-pub-qr.svg'
 import { findLecture, lectures, type Lecture } from './lectures'
 
 function lectureIdFromHash() {
@@ -15,7 +17,7 @@ function CourseHeader() {
     return (
         <header className="site-header">
             <a className="brand" href="#/" onClick={() => navigate('/')}>
-                SRE · курс
+                курс лекций
             </a>
         </header>
     )
@@ -42,14 +44,58 @@ function LectureCard({ lecture }: { lecture: Lecture }) {
 function CourseIndex() {
     return (
         <>
-            <section className="course-intro">
-                <p className="eyebrow">Site Reliability Engineering</p>
-                <h1>Лекции, конспекты и слайды в одном месте</h1>
-                <p>
-                    Каждая лекция — самостоятельная страница с материалами для
-                    чтения и презентацией, к которой можно вернуться в любое
-                    время.
-                </p>
+            <section className="course-author" aria-labelledby="author-title">
+                <img
+                    className="course-author__photo"
+                    src={authorPhoto}
+                    alt="Дмитрий Масленников"
+                />
+                <div>
+                    <p className="section-label">Об авторе</p>
+                    <h2 id="author-title">Дмитрий Масленников</h2>
+                    <p>Я руковожу SRE в Т-Банке. В IT больше 20 лет.</p>
+                    <p>
+                        Работал разработчиком: занимался системным
+                        программированием, backend- и frontend-разработкой,
+                        проектировал и эксплуатировал высоконагруженные
+                        распределённые системы. В Iponweb проектировал BidSwitch
+                        — рекламную платформу с нагрузкой порядка 2 млн запросов
+                        в секунду. Затем работал SRE в Google, в команде Google
+                        Search.
+                    </p>
+                    <p>
+                        Сейчас руковожу направлением SRE в Т-Банке: занимаюсь
+                        надёжностью информационных систем, организацией on-call,
+                        управлением инцидентами, требованиями к надёжности и
+                        развитием SRE-практик в масштабах большой
+                        технологической организации.
+                    </p>
+                    <p>
+                        Преподаю эксплуатацию и обеспечение бесперебойной работы
+                        информационных систем на ФКН ВШЭ, читаю лекции в других
+                        вузах, регулярно выступаю и провожу стримы на темы SRE и
+                        устройства сложных IT-систем.
+                    </p>
+                    <p>
+                        Этот курс — моя попытка систематизировать практический
+                        опыт эксплуатации систем: не только рассказать, какие
+                        инструменты и практики существуют в SRE, но и объяснить,
+                        зачем они нужны, где работают, где перестают работать и
+                        какие инженерные идеи за ними стоят.
+                    </p>
+                    <a
+                        className="course-author__telegram"
+                        href="https://t.me/sre_pub"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <span>Обсуждаем SRE в Telegram: @sre_pub →</span>
+                        <img
+                            src={telegramQr}
+                            alt="QR-код Telegram-чата @sre_pub"
+                        />
+                    </a>
+                </div>
             </section>
             <section className="lecture-list" aria-label="Программа курса">
                 {lectures.map((lecture) => (
