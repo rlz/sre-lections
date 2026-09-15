@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "tsBuildInfoFile": "./.tmp/tsconfig.app.tsbuildinfo",
+        "target": "ES2022",
+        "useDefineForClassFields": true,
+        "lib": ["ES2022", "DOM", "DOM.Iterable"],
+        "allowJs": false,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "allowImportingTsExtensions": false,
+        "verbatimModuleSyntax": true,
+        "moduleDetection": "force",
+        "noEmit": true,
+        "paths": {
+            "web-slides": ["../web-slides/lib/public-api.d.ts"]
+        },
+        "types": ["vite/client"],
+        "jsx": "react-jsx",
+        "jsxImportSource": "@emotion/react"
+    },
+    "include": ["src"]
+}

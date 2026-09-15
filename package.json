@@ -1,0 +1,30 @@
+{
+    "name": "sre-lections",
+    "version": "0.1.0",
+    "private": true,
+    "type": "module",
+    "engines": {
+        "node": ">=22.12.0"
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc -b && vite build",
+        "preview": "vite preview",
+        "format": "prettier --write .",
+        "format:check": "prettier --check ."
+    },
+    "dependencies": {
+        "@emotion/react": "^11.14.0",
+        "react": "^19.2.8",
+        "react-dom": "^19.2.8",
+        "web-slides": "file:../web-slides"
+    },
+    "devDependencies": {
+        "@types/react": "^19.2.17",
+        "@types/react-dom": "^19.2.3",
+        "@vitejs/plugin-react": "^6.0.4",
+        "prettier": "^3.9.6",
+        "typescript": "^7.0.2",
+        "vite": "^8.2.0"
+    }
+}
