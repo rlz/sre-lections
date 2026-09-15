@@ -1,10 +1,11 @@
 # SRE Lectures
 
-Университетские лекции по Site Reliability Engineering, собранные на React и `web-slides`.
+Университетские лекции по Site Reliability Engineering, собранные на React и
+`rlz-web-slides`.
 
 ## Запуск
 
-Нужны Node.js 22.12+ и соседняя директория `../web-slides`.
+Нужен Node.js 22.12+.
 
 ```sh
 npm install

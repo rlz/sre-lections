@@ -17,7 +17,7 @@
         "@emotion/react": "^11.14.0",
         "react": "^19.2.8",
         "react-dom": "^19.2.8",
-        "web-slides": "file:../web-slides"
+        "rlz-web-slides": "^0.1.1"
     },
     "devDependencies": {
         "@types/react": "^19.2.17",

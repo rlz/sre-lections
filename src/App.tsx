@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Presentation } from 'web-slides'
+import { Presentation } from 'rlz-web-slides'
 import { findLecture, lectures, type Lecture } from './lectures'
 
 function lectureIdFromHash() {

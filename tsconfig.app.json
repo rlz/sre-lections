@@ -18,9 +18,6 @@
         "verbatimModuleSyntax": true,
         "moduleDetection": "force",
         "noEmit": true,
-        "paths": {
-            "web-slides": ["../web-slides/lib/public-api.d.ts"]
-        },
         "types": ["vite/client"],
         "jsx": "react-jsx",
         "jsxImportSource": "@emotion/react"

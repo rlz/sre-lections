@@ -1,5 +1,5 @@
 import { css } from '@emotion/react'
-import { DecoratedSlide, SlideNumber } from 'web-slides'
+import { DecoratedSlide, SlideNumber } from 'rlz-web-slides'
 
 const content = css({
     display: 'flex',
