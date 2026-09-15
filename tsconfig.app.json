@@ -18,7 +18,7 @@
         "verbatimModuleSyntax": true,
         "moduleDetection": "force",
         "noEmit": true,
-        "types": ["vite/client"],
+        "types": ["vite/client", "mdx"],
         "jsx": "react-jsx",
         "jsxImportSource": "@emotion/react"
     },

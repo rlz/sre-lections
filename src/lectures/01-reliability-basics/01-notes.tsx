@@ -1,12 +1,5 @@
+import Notes from './01-notes.mdx'
+
 export function Lecture01ReliabilityBasicsNotes() {
-    return (
-        <>
-            <section>
-                <h2>Материал готовится</h2>
-                <p>
-                    Конспект этой лекции будет подготовлен по исходным заметкам.
-                </p>
-            </section>
-        </>
-    )
+    return <Notes />
 }

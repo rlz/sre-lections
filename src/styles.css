@@ -67,7 +67,6 @@ p {
 h1 {
     margin-bottom: 1.5rem;
     font-size: clamp(2.8rem, 7vw, 5.5rem);
-    line-height: 1;
 }
 
 .lecture-page__header h1 {
@@ -78,7 +77,6 @@ h1 {
     margin-bottom: 0;
     color: #466176;
     font-size: 1.35rem;
-    line-height: 1.5;
 }
 
 .course-author {
@@ -108,7 +106,6 @@ h1 {
 
 .course-author p {
     color: #466176;
-    line-height: 1.5;
 }
 
 .course-author p:last-of-type {
@@ -163,7 +160,6 @@ h1 {
 
 .lecture-card p {
     color: #577086;
-    line-height: 1.5;
 }
 
 .lecture-card a,
@@ -208,7 +204,32 @@ h1 {
 .lecture-notes p:not(.section-label) {
     color: #344e63;
     font-size: 1.1rem;
-    line-height: 1.7;
+}
+
+.lecture-notes ul {
+    padding-left: 1.25rem;
+    color: #344e63;
+    font-size: 1.1rem;
+}
+
+.key-point {
+    margin: 1.5rem 0;
+    padding: 1.25rem 1.5rem;
+    border-left: 0.3rem solid #147f9a;
+    border-radius: 0 0.75rem 0.75rem 0;
+    background: #eaf6f8;
+}
+
+.key-point__title {
+    margin-bottom: 0.35rem;
+    color: #147f9a !important;
+    font-size: 0.8rem !important;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.key-point p:last-child {
+    margin-bottom: 0;
 }
 
 .lecture-slides {
