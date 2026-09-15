@@ -17,7 +17,6 @@ function CourseHeader() {
             <a className="brand" href="#/" onClick={() => navigate('/')}>
                 SRE · курс
             </a>
-            <span>Университетские лекции</span>
         </header>
     )
 }
@@ -76,19 +75,15 @@ function LecturePage({ lecture }: { lecture: Lecture }) {
             </header>
 
             <div className="lecture-page__content">
-                <section className="lecture-notes" aria-label="Конспект">
-                    <Notes />
-                </section>
-
                 {lecture.slides && (
                     <section className="lecture-slides" aria-label="Слайды">
-                        <div className="lecture-slides__heading">
-                            <p className="section-label">Слайды</p>
-                            <span>Вложены в страницу</span>
-                        </div>
                         <Presentation slides={lecture.slides} controls />
                     </section>
                 )}
+
+                <section className="lecture-notes" aria-label="Конспект">
+                    <Notes />
+                </section>
             </div>
         </article>
     )

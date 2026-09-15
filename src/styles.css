@@ -71,6 +71,14 @@ h1 {
     line-height: 1;
 }
 
+.course-intro h1 {
+    font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+}
+
+.lecture-page__header h1 {
+    font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+}
+
 .course-intro > p:last-child,
 .lecture-page__header > p:last-child {
     margin-bottom: 0;
@@ -95,8 +103,7 @@ h1 {
     background: #fff;
 }
 
-.lecture-card__meta,
-.lecture-slides__heading {
+.lecture-card__meta {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
@@ -106,7 +113,9 @@ h1 {
 
 .lecture-card h2 {
     margin: 2.75rem 0 1rem;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    hyphens: auto;
+    overflow-wrap: break-word;
 }
 
 .lecture-card p {
@@ -130,13 +139,13 @@ h1 {
 
 .back-link {
     display: inline-block;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
     color: #147f9a;
     font-weight: 700;
 }
 
 .lecture-page__header {
-    padding: 3rem 0 4rem;
+    padding: 1.5rem 0 2rem;
 }
 
 .lecture-page__content {
@@ -165,34 +174,13 @@ h1 {
     background: #102235;
 }
 
-.lecture-slides__heading {
-    padding: 1.25rem 1.5rem;
-    color: #b9e5fb;
-}
-
-.lecture-slides__heading .section-label {
-    color: #63c5da;
-}
-
-.lecture-slides > div:last-child {
-    min-height: 33rem;
-}
-
 @media (max-width: 640px) {
     .site-shell {
         width: min(100% - 2rem, 1120px);
     }
 
-    .site-header span {
-        display: none;
-    }
-
     .course-intro,
     .lecture-page__header {
         padding: 4rem 0 3rem;
-    }
-
-    .lecture-slides > div:last-child {
-        min-height: 20rem;
     }
 }
