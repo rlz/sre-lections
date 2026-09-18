@@ -25,10 +25,16 @@ export function Lecture01ReliabilityBasicsSlide06NinesWithoutContext() {
     }
 
     return (
-        <LectureContentSlide
-            number={1}
-            title="Девятки без контекста ничего не обещают"
-        >
+        <LectureContentSlide number={1}>
+            <h1
+                css={{
+                    maxWidth: '78%',
+                    margin: '0 0 2.8rem',
+                    color: theme.colors.textLight
+                }}
+            >
+                Девятки без контекста ничего не обещают
+            </h1>
             <p css={[statement, { color: theme.colors['accent-1'] }]}>99,9 %</p>
             <ul css={questions}>
                 <li css={[question, questionStyle]}>Чего именно?</li>

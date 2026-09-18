@@ -23,7 +23,16 @@ export function Lecture01ReliabilityBasicsSlide07ReliabilityAndAvailability() {
     const muted = { color: theme.colors.muted }
 
     return (
-        <LectureContentSlide number={1} title="Это разные понятия">
+        <LectureContentSlide number={1}>
+            <h1
+                css={{
+                    maxWidth: '78%',
+                    margin: '0 0 2.8rem',
+                    color: theme.colors.textLight
+                }}
+            >
+                Это разные понятия
+            </h1>
             <div css={comparison}>
                 <section css={panel}>
                     <p css={[label, accent]}>Надёжность</p>

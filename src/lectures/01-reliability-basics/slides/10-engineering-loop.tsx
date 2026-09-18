@@ -27,7 +27,16 @@ export function Lecture01ReliabilityBasicsSlide10EngineeringLoop() {
     const stepStyle = [step, theme.backgrounds.solid('dark')]
 
     return (
-        <LectureContentSlide number={1} title="Как работать с надёжностью">
+        <LectureContentSlide number={1}>
+            <h1
+                css={{
+                    maxWidth: '78%',
+                    margin: '0 0 2.8rem',
+                    color: theme.colors.textLight
+                }}
+            >
+                Как работать с надёжностью
+            </h1>
             <div css={loop}>
                 <div css={stepStyle}>
                     Выбрать значимые ожидания пользователей

@@ -24,10 +24,16 @@ export function Lecture01ReliabilityBasicsSlide03UserOutcome() {
     const cardText = css({ margin: '1rem 0 0', fontSize: '1.15em' })
 
     return (
-        <LectureContentSlide
-            number={1}
-            title="HTTP 200 ещё не означает успех для пользователя"
-        >
+        <LectureContentSlide number={1}>
+            <h1
+                css={{
+                    maxWidth: '78%',
+                    margin: '0 0 2.8rem',
+                    color: theme.colors.textLight
+                }}
+            >
+                HTTP 200 ещё не означает успех для пользователя
+            </h1>
             <div css={layout}>
                 <section
                     css={[

@@ -1,7 +1,13 @@
 import { css } from '@emotion/react'
-import { DecoratedSlide, SlideNumber, useSlidesTheme } from 'rlz-web-slides'
+import type { PropsWithChildren } from 'react'
+import {
+    DecoratedSlide,
+    Panel,
+    SlideNumber,
+    useSlidesTheme
+} from 'rlz-web-slides'
 
-type LectureCoverSlideProps = {
+interface LectureCoverSlideProps extends PropsWithChildren {
     number: number
     title: string
     summary: string
@@ -10,7 +16,8 @@ type LectureCoverSlideProps = {
 export function LectureCoverSlide({
     number,
     title: lectureTitle,
-    summary: lectureSummary
+    summary: lectureSummary,
+    children
 }: LectureCoverSlideProps) {
     const theme = useSlidesTheme()
     const content = css({
@@ -27,11 +34,20 @@ export function LectureCoverSlide({
             headerRight={`Лекция ${number}`}
             footerLeft={null}
             footerRight={<SlideNumber />}
-            css={css(theme.backgrounds.solid('dark'), theme.typography)}
+            css={css(theme.backgrounds.solid('neutral'), theme.typography)}
         >
-            <div css={content}>
-                <h1>{lectureTitle}</h1>
-                <p css={{ marginTop: 40 }}>{lectureSummary}</p>
+            <div
+                css={{
+                    display: 'grid',
+                    height: '100%',
+                    gridTemplateColumns: '1fr 1fr'
+                }}
+            >
+                <div css={content}>
+                    <h1>{lectureTitle}</h1>
+                    <p css={{ marginTop: 40 }}>{lectureSummary}</p>
+                </div>
+                <Panel css={{ gridColumn: '2' }}>{children}</Panel>
             </div>
         </DecoratedSlide>
     )

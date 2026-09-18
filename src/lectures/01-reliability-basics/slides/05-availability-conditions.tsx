@@ -32,10 +32,16 @@ export function Lecture01ReliabilityBasicsSlide05AvailabilityConditions() {
     const labelStyle = { color: theme.colors['accent-1'] }
 
     return (
-        <LectureContentSlide
-            number={1}
-            title="Прежде чем измерять доступность, договоритесь"
-        >
+        <LectureContentSlide number={1}>
+            <h1
+                css={{
+                    maxWidth: '78%',
+                    margin: '0 0 2.8rem',
+                    color: theme.colors.textLight
+                }}
+            >
+                Прежде чем измерять доступность, договоритесь
+            </h1>
             <ul css={list}>
                 <li css={[item, itemStyle]}>
                     <span css={[label, labelStyle]}>Границы услуги</span>

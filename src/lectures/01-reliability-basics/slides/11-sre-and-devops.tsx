@@ -21,7 +21,16 @@ export function Lecture01ReliabilityBasicsSlide11SreAndDevops() {
     const panel = [column, theme.backgrounds.solid('light'), theme.shadows.low]
 
     return (
-        <LectureContentSlide number={1} title="SRE и DevOps">
+        <LectureContentSlide number={1}>
+            <h1
+                css={{
+                    maxWidth: '78%',
+                    margin: '0 0 2.8rem',
+                    color: theme.colors.textLight
+                }}
+            >
+                SRE и DevOps
+            </h1>
             <div css={comparison}>
                 <section css={panel}>
                     <p css={[label, { color: theme.colors['accent-1'] }]}>

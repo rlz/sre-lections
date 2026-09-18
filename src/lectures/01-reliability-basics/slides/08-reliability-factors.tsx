@@ -19,10 +19,16 @@ export function Lecture01ReliabilityBasicsSlide08ReliabilityFactors() {
     const factorStyle = [factor, theme.backgrounds.solid('neutral')]
 
     return (
-        <LectureContentSlide
-            number={1}
-            title="Надёжность зависит от всей системы"
-        >
+        <LectureContentSlide number={1}>
+            <h1
+                css={{
+                    maxWidth: '78%',
+                    margin: '0 0 2.8rem',
+                    color: theme.colors.textLight
+                }}
+            >
+                Надёжность зависит от всей системы
+            </h1>
             <div css={factors}>
                 <div css={factorStyle}>Архитектура, код, оборудование</div>
                 <div css={factorStyle}>Объём и характер нагрузки</div>

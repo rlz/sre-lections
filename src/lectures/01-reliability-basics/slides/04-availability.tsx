@@ -18,10 +18,16 @@ export function Lecture01ReliabilityBasicsSlide04Availability() {
     })
 
     return (
-        <LectureContentSlide
-            number={1}
-            title="Доступность — результат договорённого измерения"
-        >
+        <LectureContentSlide number={1}>
+            <h1
+                css={{
+                    maxWidth: '78%',
+                    margin: '0 0 2.8rem',
+                    color: theme.colors.textLight
+                }}
+            >
+                Доступность — результат договорённого измерения
+            </h1>
             <div
                 css={[
                     formula,

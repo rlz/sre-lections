@@ -24,10 +24,16 @@ export function Lecture01ReliabilityBasicsSlide09DisasterRecovery() {
     ]
 
     return (
-        <LectureContentSlide
-            number={1}
-            title="Надёжность проверяется и в катастрофе"
-        >
+        <LectureContentSlide number={1}>
+            <h1
+                css={{
+                    maxWidth: '78%',
+                    margin: '0 0 2.8rem',
+                    color: theme.colors.textLight
+                }}
+            >
+                Надёжность проверяется и в катастрофе
+            </h1>
             <p css={[statement, { color: theme.colors.muted }]}>
                 Если утрачена площадка, инфраструктура или данные, организация
                 должна суметь восстановить работу.

@@ -1,16 +1,17 @@
 import { css } from '@emotion/react'
+import type { Interpolation, Theme } from '@emotion/react'
 import type { ReactNode } from 'react'
 import { DecoratedSlide, SlideNumber, useSlidesTheme } from 'rlz-web-slides'
 
 type LectureContentSlideProps = {
     number: number
-    title: string
+    css?: Interpolation<Theme>
     children: ReactNode
 }
 
 export function LectureContentSlide({
     number,
-    title: slideTitle,
+    css: slideCss,
     children
 }: LectureContentSlideProps) {
     const theme = useSlidesTheme()
@@ -19,27 +20,21 @@ export function LectureContentSlide({
         height: '100%',
         flexDirection: 'column',
         justifyContent: 'center',
-        padding: '1.5rem 0 2.5rem'
+        padding: '1rem 0 1rem'
     })
-    const title = css({
-        maxWidth: '78%',
-        margin: '0 0 2.8rem'
-    })
-
     return (
         <DecoratedSlide
             headerLeft="SRE · университетский курс"
             headerRight={`Лекция ${number}`}
             footerLeft={null}
             footerRight={<SlideNumber />}
-            css={theme.backgrounds.solid('light')}
+            css={[
+                theme.backgrounds.solid('neutral'),
+                theme.typography,
+                slideCss
+            ]}
         >
-            <div css={content}>
-                <h1 css={[title, { color: theme.colors.textLight }]}>
-                    {slideTitle}
-                </h1>
-                {children}
-            </div>
+            <div css={content}>{children}</div>
         </DecoratedSlide>
     )
 }
