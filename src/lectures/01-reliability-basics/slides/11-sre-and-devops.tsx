@@ -10,7 +10,13 @@ export function Lecture01ReliabilityBasicsSlide11SreAndDevops() {
         gap: '1.5rem',
         maxWidth: '76rem'
     })
-    const column = css({ padding: '2rem', borderRadius: '1rem' })
+    const column = css({
+        minHeight: '12rem',
+        padding: theme.spacings.base,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between'
+    })
     const label = css({
         margin: 0,
         fontSize: '0.6em',
@@ -18,7 +24,7 @@ export function Lecture01ReliabilityBasicsSlide11SreAndDevops() {
         textTransform: 'uppercase'
     })
     const text = css({ margin: '1rem 0 0', fontSize: '1.2em' })
-    const panel = [column, theme.backgrounds.solid('light'), theme.shadows.low]
+    const panel = [column]
 
     return (
         <LectureContentSlide number={1}>
@@ -32,20 +38,24 @@ export function Lecture01ReliabilityBasicsSlide11SreAndDevops() {
                 SRE и DevOps
             </h1>
             <div css={comparison}>
-                <section css={panel}>
+                <section
+                    css={[...panel, theme.backgrounds.gradient('accent-1')]}
+                >
                     <p css={[label, { color: theme.colors['accent-1'] }]}>
                         DevOps
                     </p>
-                    <p css={[text, { color: theme.colors.muted }]}>
+                    <p css={[text, { color: theme.colors.textLight }]}>
                         Совместная ответственность за быструю и безопасную
                         поставку ценности пользователю
                     </p>
                 </section>
-                <section css={panel}>
+                <section
+                    css={[...panel, theme.backgrounds.gradient('accent-2')]}
+                >
                     <p css={[label, { color: theme.colors['accent-1'] }]}>
                         SRE
                     </p>
-                    <p css={[text, { color: theme.colors.muted }]}>
+                    <p css={[text, { color: theme.colors.textLight }]}>
                         Инженерный подход к надёжности через ожидания
                         пользователей, измерения и управление рисками
                     </p>

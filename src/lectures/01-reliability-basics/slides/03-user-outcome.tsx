@@ -1,69 +1,77 @@
-import { css } from '@emotion/react'
-import { useSlidesTheme } from 'rlz-web-slides'
+import { Panel, useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
+import purchaseChain from '../assets/03-purchase-chain.png'
 
 export function Lecture01ReliabilityBasicsSlide03UserOutcome() {
     const theme = useSlidesTheme()
-    const layout = css({
-        display: 'grid',
-        gridTemplateColumns: '1fr 1fr',
-        gap: '1.5rem',
-        maxWidth: '76rem'
-    })
-    const card = css({
-        minHeight: '13rem',
-        padding: '1.7rem',
-        borderRadius: '1rem'
-    })
-    const cardTitle = css({
-        margin: 0,
-        fontSize: '0.56em',
-        fontWeight: 800,
-        textTransform: 'uppercase'
-    })
-    const cardText = css({ margin: '1rem 0 0', fontSize: '1.15em' })
 
     return (
         <LectureContentSlide number={1}>
-            <h1
+            <div
                 css={{
-                    maxWidth: '78%',
-                    margin: '0 0 2.8rem',
-                    color: theme.colors.textLight
+                    display: 'grid',
+                    gridTemplateColumns: '1fr 1fr',
+                    gridTemplateRows: '1fr auto',
+                    columnGap: theme.spacing,
+                    height: '100%'
                 }}
             >
-                HTTP 200 ещё не означает успех для пользователя
-            </h1>
-            <div css={layout}>
-                <section
-                    css={[
-                        card,
-                        theme.backgrounds.solid('light'),
-                        theme.shadows.low
-                    ]}
+                <div css={{ gridRow: '1', gridColumn: '1' }}>
+                    <h1>Что если отслеживать HTTP 200 OK?</h1>
+                    <p>
+                        Современные услуги сложны и реализуются работой многих
+                        сервисов и API вызовов.
+                    </p>
+                    <p>
+                        Успешный или неуспешный API выхов не говорит, о успехе
+                        или неуспехе операции. Действие пользователя часто
+                        прокатывается через множество сервисов, а иногда —
+                        организаций.
+                    </p>
+                    <p>
+                        Так, покупка в интернет магазине, может прокатываться
+                        через сервисы магазина, склада, операторов доставки,
+                        платежного партнера, платежной системы, банка и т.д.
+                    </p>
+                </div>
+                <Panel css={{ gridRow: '1', gridColumn: '2' }}>
+                    <ul>
+                        <li>
+                            Была ли оказана услуга, если после платежа в ленте
+                            операций информация появилась только через две
+                            минуты?
+                        </li>
+                        <li>
+                            Была ли оказана услуга, если человек оформил ОСАГО,
+                            все прошло гладно, но НСИС ушли некорректные данные?
+                        </li>
+                        <li>
+                            Была ли оказана услуга, если человек оформил билеты,
+                            но они не пришли ему на почту, но видны в
+                            приложении?
+                        </li>
+                    </ul>
+                </Panel>
+                <div
+                    css={{
+                        gridRow: '2',
+                        gridColumn: '1 / 3',
+                        overflow: 'hidden'
+                    }}
                 >
-                    <p css={[cardTitle, { color: theme.colors['accent-1'] }]}>
-                        Наблюдение сервиса
-                    </p>
-                    <p css={[cardText, { color: theme.colors.muted }]}>
-                        Платёжный API ответил HTTP 200
-                    </p>
-                </section>
-                <section
-                    css={[
-                        card,
-                        theme.backgrounds.solid('light'),
-                        theme.shadows.low
-                    ]}
-                >
-                    <p css={[cardTitle, { color: theme.colors['accent-1'] }]}>
-                        Результат для пользователя
-                    </p>
-                    <p css={[cardText, { color: theme.colors.muted }]}>
-                        Деньги списаны, но платёж появился в истории только
-                        через две минуты. Услуга была доступна?
-                    </p>
-                </section>
+                    <img
+                        src={purchaseChain}
+                        alt="Цепочка покупки: магазин, склад, доставка, платёжные сервисы и банк"
+                        css={{
+                            display: 'block',
+                            margin: '0 auto',
+                            width: '70%',
+                            height: 'auto',
+                            position: 'relative',
+                            top: -30
+                        }}
+                    />
+                </div>
             </div>
         </LectureContentSlide>
     )

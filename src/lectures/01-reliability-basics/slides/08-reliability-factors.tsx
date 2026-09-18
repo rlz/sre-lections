@@ -11,12 +11,18 @@ export function Lecture01ReliabilityBasicsSlide08ReliabilityFactors() {
         maxWidth: '76rem'
     })
     const factor = css({
-        padding: '1.4rem',
-        borderRadius: '0.8rem',
+        minHeight: '5.4rem',
+        padding: theme.spacings.half,
+        display: 'flex',
+        alignItems: 'flex-end',
         fontSize: '1.05em',
         fontWeight: 700
     })
-    const factorStyle = [factor, theme.backgrounds.solid('neutral')]
+    const factorStyles = [
+        theme.backgrounds.gradient('accent-1'),
+        theme.backgrounds.gradient('accent-2'),
+        theme.backgrounds.gradient('accent-3')
+    ]
 
     return (
         <LectureContentSlide number={1}>
@@ -30,13 +36,27 @@ export function Lecture01ReliabilityBasicsSlide08ReliabilityFactors() {
                 Надёжность зависит от всей системы
             </h1>
             <div css={factors}>
-                <div css={factorStyle}>Архитектура, код, оборудование</div>
-                <div css={factorStyle}>Объём и характер нагрузки</div>
-                <div css={factorStyle}>Ресурсы и запас мощности</div>
-                <div css={factorStyle}>Внешняя среда и партнёры</div>
-                <div css={factorStyle}>Скорость и безопасность изменений</div>
-                <div css={factorStyle}>Наблюдаемость и дежурства</div>
-                <div css={factorStyle}>Люди, знания и процессы</div>
+                <div css={[factor, factorStyles[0]]}>
+                    Архитектура, код, оборудование
+                </div>
+                <div css={[factor, factorStyles[1]]}>
+                    Объём и характер нагрузки
+                </div>
+                <div css={[factor, factorStyles[2]]}>
+                    Ресурсы и запас мощности
+                </div>
+                <div css={[factor, factorStyles[0]]}>
+                    Внешняя среда и партнёры
+                </div>
+                <div css={[factor, factorStyles[1]]}>
+                    Скорость и безопасность изменений
+                </div>
+                <div css={[factor, factorStyles[2]]}>
+                    Наблюдаемость и дежурства
+                </div>
+                <div css={[factor, factorStyles[0]]}>
+                    Люди, знания и процессы
+                </div>
             </div>
         </LectureContentSlide>
     )

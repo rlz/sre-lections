@@ -3,7 +3,6 @@ import { Lecture01ReliabilityBasicsSlide01Cover } from './01-cover'
 import { Lecture01ReliabilityBasicsSlide02Reliability } from './02-reliability'
 import { Lecture01ReliabilityBasicsSlide03UserOutcome } from './03-user-outcome'
 import { Lecture01ReliabilityBasicsSlide04Availability } from './04-availability'
-import { Lecture01ReliabilityBasicsSlide05AvailabilityConditions } from './05-availability-conditions'
 import { Lecture01ReliabilityBasicsSlide06NinesWithoutContext } from './06-nines-without-context'
 import { Lecture01ReliabilityBasicsSlide07ReliabilityAndAvailability } from './07-reliability-and-availability'
 import { Lecture01ReliabilityBasicsSlide08ReliabilityFactors } from './08-reliability-factors'
@@ -21,9 +20,6 @@ export const slides = [
     }),
     createElement(Lecture01ReliabilityBasicsSlide04Availability, {
         key: '04-availability'
-    }),
-    createElement(Lecture01ReliabilityBasicsSlide05AvailabilityConditions, {
-        key: '05-availability-conditions'
     }),
     createElement(Lecture01ReliabilityBasicsSlide06NinesWithoutContext, {
         key: '06-nines-without-context'

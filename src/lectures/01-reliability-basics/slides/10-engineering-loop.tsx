@@ -14,8 +14,7 @@ export function Lecture01ReliabilityBasicsSlide10EngineeringLoop() {
         display: 'flex',
         minHeight: '12rem',
         alignItems: 'flex-end',
-        padding: '1.3rem',
-        borderRadius: '0.8rem',
+        padding: theme.spacings.half,
         fontSize: '1em',
         fontWeight: 700
     })
@@ -24,7 +23,12 @@ export function Lecture01ReliabilityBasicsSlide10EngineeringLoop() {
         margin: '1.8rem 0 0',
         fontSize: '0.9em'
     })
-    const stepStyle = [step, theme.backgrounds.solid('dark')]
+    const stepStyles = [
+        theme.backgrounds.gradient('accent-1'),
+        theme.backgrounds.gradient('accent-2'),
+        theme.backgrounds.gradient('accent-3'),
+        theme.backgrounds.gradient('neutral')
+    ]
 
     return (
         <LectureContentSlide number={1}>
@@ -38,12 +42,16 @@ export function Lecture01ReliabilityBasicsSlide10EngineeringLoop() {
                 Как работать с надёжностью
             </h1>
             <div css={loop}>
-                <div css={stepStyle}>
+                <div css={[step, stepStyles[0]]}>
                     Выбрать значимые ожидания пользователей
                 </div>
-                <div css={stepStyle}>Измерять их выполнение</div>
-                <div css={stepStyle}>Находить существенные риски</div>
-                <div css={stepStyle}>Менять систему и способ работы</div>
+                <div css={[step, stepStyles[1]]}>Измерять их выполнение</div>
+                <div css={[step, stepStyles[2]]}>
+                    Находить существенные риски
+                </div>
+                <div css={[step, stepStyles[3]]}>
+                    Менять систему и способ работы
+                </div>
             </div>
             <p css={[note, { color: theme.colors.muted }]}>
                 Нельзя оценить надёжность одним числом или заранее учесть все

@@ -10,7 +10,13 @@ export function Lecture01ReliabilityBasicsSlide07ReliabilityAndAvailability() {
         gap: '1.5rem',
         maxWidth: '76rem'
     })
-    const column = css({ padding: '2rem', borderRadius: '1rem' })
+    const column = css({
+        minHeight: '12rem',
+        padding: theme.spacings.base,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between'
+    })
     const label = css({
         margin: 0,
         fontSize: '0.6em',
@@ -18,9 +24,8 @@ export function Lecture01ReliabilityBasicsSlide07ReliabilityAndAvailability() {
         textTransform: 'uppercase'
     })
     const text = css({ margin: '1rem 0 0', fontSize: '1.34em' })
-    const panel = [column, theme.backgrounds.solid('light'), theme.shadows.low]
+    const panel = [column]
     const accent = { color: theme.colors['accent-1'] }
-    const muted = { color: theme.colors.muted }
 
     return (
         <LectureContentSlide number={1}>
@@ -34,15 +39,19 @@ export function Lecture01ReliabilityBasicsSlide07ReliabilityAndAvailability() {
                 Это разные понятия
             </h1>
             <div css={comparison}>
-                <section css={panel}>
+                <section
+                    css={[...panel, theme.backgrounds.gradient('accent-1')]}
+                >
                     <p css={[label, accent]}>Надёжность</p>
-                    <p css={[text, muted]}>
+                    <p css={[text, { color: theme.colors.textLight }]}>
                         Свойство системы и способа её эксплуатации
                     </p>
                 </section>
-                <section css={panel}>
+                <section
+                    css={[...panel, theme.backgrounds.gradient('accent-2')]}
+                >
                     <p css={[label, accent]}>Доступность</p>
-                    <p css={[text, muted]}>
+                    <p css={[text, { color: theme.colors.textLight }]}>
                         История выполнения выбранного пользовательского ожидания
                     </p>
                 </section>

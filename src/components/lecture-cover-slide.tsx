@@ -23,7 +23,6 @@ export function LectureCoverSlide({
     const content = css({
         display: 'flex',
         height: '100%',
-        maxWidth: '76%',
         flexDirection: 'column',
         justifyContent: 'center'
     })
@@ -40,7 +39,8 @@ export function LectureCoverSlide({
                 css={{
                     display: 'grid',
                     height: '100%',
-                    gridTemplateColumns: '1fr 1fr'
+                    gridTemplateColumns: '1fr 1fr',
+                    gap: theme.spacing
                 }}
             >
                 <div css={content}>

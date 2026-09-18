@@ -27,6 +27,17 @@ This repository contains the presentation materials for the university SRE cours
 - Use `web-slides` public imports rather than copying its implementation into this repository.
 - Do not add dependencies unless they materially improve the lectures or the build.
 
+### Established slide style
+
+- Treat the first lecture's first two slides as the visual reference for the course: use a quiet, light slide canvas with generous whitespace, a restrained header/footer chrome, and one clear visual idea per slide.
+- Cover slides should use a balanced two-column composition: the title and one-sentence summary on the left, and a large illustration plus a concise lecture roadmap on the right. Keep the roadmap short and scannable; do not turn it into a paragraph.
+- Content slides should introduce the idea in a strong upper block, then make the reasoning visible through a small number of equally weighted lower blocks. Prefer a clear visual rhythm such as three columns, with one thought per block.
+- Use composition and spacing to create hierarchy before adding decoration: large heading, short highlighted definition or claim, brief explanatory text, then compact numbered or colored takeaways.
+- Preserve the established illustration language: reuse a coherent character/world across a lecture where appropriate; use sharp-edged pencil-and-colored-pencil artwork with visible graphite texture, expressive poses, dark neutral backgrounds inside the artwork, and restrained blue, coral, green, and warm skin/wood accents. Let the illustration communicate the emotional state or tension of the concept.
+- Keep illustrations subordinate to the message: give them a dedicated area, use `object-fit: contain`, avoid cropping important gestures or props, and do not put text over the artwork unless the composition explicitly requires it.
+- Use theme gradients and muted accent colors to separate conceptual blocks, not as decoration. Numbered markers should be compact, high-contrast, and consistent across sibling blocks.
+- Keep slide copy conversational and explanatory in Russian. Bold only the key contrast or concept inside a sentence; avoid dense walls of text and repeated wording between the title and body.
+
 ## GitHub Pages and custom domain
 
 - `.github/workflows/deploy-pages.yml` is the only deployment path. Do not publish manually.

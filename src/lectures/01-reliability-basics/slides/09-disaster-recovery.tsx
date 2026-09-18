@@ -4,7 +4,11 @@ import { LectureContentSlide } from '../../../components/lecture-content-slide'
 
 export function Lecture01ReliabilityBasicsSlide09DisasterRecovery() {
     const theme = useSlidesTheme()
-    const statement = css({ maxWidth: '72rem', fontSize: '1.7em' })
+    const statement = css({
+        maxWidth: '72rem',
+        fontSize: '1.7em',
+        fontWeight: 700
+    })
     const preparations = css({
         display: 'flex',
         flexWrap: 'wrap',
@@ -12,15 +16,15 @@ export function Lecture01ReliabilityBasicsSlide09DisasterRecovery() {
         marginTop: '2.3rem'
     })
     const preparation = css({
-        padding: '0.8rem 1.1rem',
-        borderRadius: '999px',
+        minWidth: '11rem',
+        padding: theme.spacings.half,
         fontSize: '0.75em',
         fontWeight: 800
     })
     const preparationStyle = [
         preparation,
-        theme.backgrounds.solid('neutral'),
-        { color: theme.colors['accent-1'] }
+        theme.backgrounds.gradient('accent-1'),
+        { color: theme.colors.textLight }
     ]
 
     return (

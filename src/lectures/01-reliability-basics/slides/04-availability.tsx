@@ -1,47 +1,66 @@
-import { css } from '@emotion/react'
-import { useSlidesTheme } from 'rlz-web-slides'
+import { Panel, useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
 
 export function Lecture01ReliabilityBasicsSlide04Availability() {
     const theme = useSlidesTheme()
-    const formula = css({
-        maxWidth: '76rem',
-        padding: '2rem 2.4rem',
-        borderRadius: '0 1rem 1rem 0',
-        fontSize: '2em',
-        fontWeight: 800
-    })
-    const note = css({
-        maxWidth: '65rem',
-        margin: '2rem 0 0',
-        fontSize: '1em'
-    })
 
     return (
         <LectureContentSlide number={1}>
-            <h1
+            <div
                 css={{
-                    maxWidth: '78%',
-                    margin: '0 0 2.8rem',
-                    color: theme.colors.textLight
+                    display: 'grid',
+                    gridTemplateColumns: '1fr 1fr',
+                    gridTemplateRows: '1fr',
+                    columnGap: theme.spacing,
+                    height: '100%'
                 }}
             >
-                Доступность — результат договорённого измерения
-            </h1>
-            <div
-                css={[
-                    formula,
-                    theme.backgrounds.solid('neutral'),
-                    { borderLeft: `0.45rem solid ${theme.colors['accent-1']}` }
-                ]}
-            >
-                Доступность — как услуга работала в прошлом периоде
+                <div css={{ gridRow: '1', gridColumn: '1' }}>
+                    <h1>Доступность</h1>
+                    <p>
+                        Наши сервисы, которые обладали какой-то надежностью с
+                        учетом обстоятельств и везения работали какое-то время.
+                        Мы можем записать историю этой работы и назовем ее
+                        доступностью.
+                    </p>
+                    <p>
+                        Доступность можно измерять разными методами: по времени
+                        без нарушения, количество успешных операций или по
+                        какой-нибудь сложной методике. Обычно выражают в
+                        процентах. Но что это за проценты — зависит от
+                        примененного метода.
+                    </p>
+                    <p
+                        css={{
+                            fontSize: '4em',
+                            color: theme.colors.muted,
+                            fontWeight: 'bold',
+                            textAlign: 'center'
+                        }}
+                    >
+                        99.99%
+                    </p>
+                </div>
+                <Panel css={{ gridRow: '1', gridColumn: '2' }}>
+                    <h2 css={{ marginBottom: 0 }}>
+                        Факторы, влияющие на доступность
+                    </h2>
+                    <p
+                        css={{
+                            fontSize: '0.9em',
+                            margin: '0.5em 0 1.2em 0 !important'
+                        }}
+                    >
+                        (и не относящиеся к надежности)
+                    </p>
+                    <ul>
+                        <li>то, что мы включили в измеряемую услугу</li>
+                        <li>за какой период времени мы измеряем</li>
+                        <li>что договорились считать успешной работой</li>
+                        <li>какую методологию подсчета выбрали</li>
+                    </ul>
+                </Panel>
             </div>
-            <p css={[note, { color: theme.colors.muted }]}>
-                Её можно считать по времени без нарушений, успешным операциям
-                или взвешенным пользовательским сценариям. Метод выбирают до
-                измерения.
-            </p>
         </LectureContentSlide>
     )
 }
