@@ -17,6 +17,7 @@ This repository contains the presentation materials for the university SRE cours
 - Write presentation copy in Russian unless a slide explicitly needs English terminology or source code.
 - Keep slides focused: one main idea per slide, concise copy, and generous whitespace.
 - Keep each lecture in its own directory under `src/lectures`. Its numbered notes module defines the notes as a React component with semantic HTML tags; do not represent lecture prose as JSON or arrays of strings. Keep slides in the lecture's `slides/` directory, with one TSX module per slide and an `index.ts` that orders them.
+- A lecture directory may contain `dm-notes.md`. These are the author's personal notes and reflections for that lecture: read them when changing the lecture or slide context, commit them so the author can access them, but never include them in the build or display them directly on the site or slides. Do not edit their text.
 - Number every lecture directory and lecture-specific file with a two-digit prefix and a descriptive kebab-case name, for example `01-what-is-sre/01-what-is-sre.tsx`. Number every slide file in its lecture's `slides/` directory the same way, for example `01-cover.tsx`.
 - Name lecture and slide React components in PascalCase with their lecture and slide numbers, for example `Lecture01WhatIsSreNotes` and `Lecture01WhatIsSreSlide01Cover`. `index` files are the only exception: they assemble and order modules rather than define content.
 - Keep shared course chrome and styles in `src` root or `src/components`.

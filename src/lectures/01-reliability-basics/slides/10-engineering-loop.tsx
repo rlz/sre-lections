@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 import { useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
 
-export function Lecture01ReliabilityBasicsSlide09EngineeringLoop() {
+export function Lecture01ReliabilityBasicsSlide10EngineeringLoop() {
     const theme = useSlidesTheme()
     const loop = css({
         display: 'grid',

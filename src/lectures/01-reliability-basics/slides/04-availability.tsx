@@ -20,7 +20,7 @@ export function Lecture01ReliabilityBasicsSlide04Availability() {
     return (
         <LectureContentSlide
             number={1}
-            title="Доступность — наблюдаемый результат"
+            title="Доступность — результат договорённого измерения"
         >
             <div
                 css={[
@@ -29,11 +29,12 @@ export function Lecture01ReliabilityBasicsSlide04Availability() {
                     { borderLeft: `0.45rem solid ${theme.colors['accent-1']}` }
                 ]}
             >
-                Доступность = время корректной работы / всё наблюдаемое время
+                Доступность — как услуга работала в прошлом периоде
             </div>
             <p css={[note, { color: theme.colors.muted }]}>
-                Она показывает, как сервис работал в выбранном периоде, а не
-                насколько он защищён от будущих сбоев.
+                Её можно считать по времени без нарушений, успешным операциям
+                или взвешенным пользовательским сценариям. Метод выбирают до
+                измерения.
             </p>
         </LectureContentSlide>
     )

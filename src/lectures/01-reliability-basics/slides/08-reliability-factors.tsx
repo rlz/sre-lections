@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 import { useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
 
-export function Lecture01ReliabilityBasicsSlide07ReliabilityFactors() {
+export function Lecture01ReliabilityBasicsSlide08ReliabilityFactors() {
     const theme = useSlidesTheme()
     const factors = css({
         display: 'grid',
@@ -26,6 +26,7 @@ export function Lecture01ReliabilityBasicsSlide07ReliabilityFactors() {
             <div css={factors}>
                 <div css={factorStyle}>Архитектура, код, оборудование</div>
                 <div css={factorStyle}>Объём и характер нагрузки</div>
+                <div css={factorStyle}>Ресурсы и запас мощности</div>
                 <div css={factorStyle}>Внешняя среда и партнёры</div>
                 <div css={factorStyle}>Скорость и безопасность изменений</div>
                 <div css={factorStyle}>Наблюдаемость и дежурства</div>

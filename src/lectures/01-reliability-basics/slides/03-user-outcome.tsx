@@ -26,7 +26,7 @@ export function Lecture01ReliabilityBasicsSlide03UserOutcome() {
     return (
         <LectureContentSlide
             number={1}
-            title="Успешный ответ не всегда означает доступную услугу"
+            title="HTTP 200 ещё не означает успех для пользователя"
         >
             <div css={layout}>
                 <section
@@ -40,7 +40,7 @@ export function Lecture01ReliabilityBasicsSlide03UserOutcome() {
                         Наблюдение сервиса
                     </p>
                     <p css={[cardText, { color: theme.colors.muted }]}>
-                        HTTP 200
+                        Платёжный API ответил HTTP 200
                     </p>
                 </section>
                 <section
@@ -54,8 +54,8 @@ export function Lecture01ReliabilityBasicsSlide03UserOutcome() {
                         Результат для пользователя
                     </p>
                     <p css={[cardText, { color: theme.colors.muted }]}>
-                        Платёж проведён, данные сохранены, результат получен
-                        вовремя
+                        Деньги списаны, но платёж появился в истории только
+                        через две минуты. Услуга была доступна?
                     </p>
                 </section>
             </div>

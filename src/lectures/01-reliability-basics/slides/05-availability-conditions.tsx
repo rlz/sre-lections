@@ -6,7 +6,7 @@ export function Lecture01ReliabilityBasicsSlide05AvailabilityConditions() {
     const theme = useSlidesTheme()
     const list = css({
         display: 'grid',
-        gridTemplateColumns: '1fr 1fr',
+        gridTemplateColumns: 'repeat(3, 1fr)',
         gap: '1rem 3rem',
         maxWidth: '75rem',
         padding: 0,
@@ -38,6 +38,10 @@ export function Lecture01ReliabilityBasicsSlide05AvailabilityConditions() {
         >
             <ul css={list}>
                 <li css={[item, itemStyle]}>
+                    <span css={[label, labelStyle]}>Границы услуги</span>
+                    Какие системы и зависимости в неё входят?
+                </li>
+                <li css={[item, itemStyle]}>
                     <span css={[label, labelStyle]}>Сценарий</span>
                     Какие действия пользователя важны?
                 </li>
@@ -48,6 +52,10 @@ export function Lecture01ReliabilityBasicsSlide05AvailabilityConditions() {
                 <li css={[item, itemStyle]}>
                     <span css={[label, labelStyle]}>Время</span>
                     Какая задержка ещё приемлема?
+                </li>
+                <li css={[item, itemStyle]}>
+                    <span css={[label, labelStyle]}>Метод</span>
+                    Считаем проверки, запросы или сценарии с весами?
                 </li>
                 <li css={[item, itemStyle]}>
                     <span css={[label, labelStyle]}>Период</span>
