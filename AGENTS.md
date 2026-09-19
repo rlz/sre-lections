@@ -38,6 +38,52 @@ This repository contains the presentation materials for the university SRE cours
 - Use theme gradients and muted accent colors to separate conceptual blocks, not as decoration. Numbered markers should be compact, high-contrast, and consistent across sibling blocks.
 - Keep slide copy conversational and explanatory in Russian. Bold only the key contrast or concept inside a sentence; avoid dense walls of text and repeated wording between the title and body.
 
+### Panel language and layouts
+
+- Treat a panel as a rectangular visual surface that groups one idea. Use the
+  `Panel` component from `rlz-web-slides` for ordinary surfaces; use a `div` or
+  semantic element with the same spacing and theme background only when the
+  element is part of a custom grid or a deliberately flat colored block.
+- A “серая панель” or “нейтральная панель” means the standard quiet `Panel`:
+  place it in the requested grid area, let its default neutral background and
+  padding carry the surface treatment, and keep the surrounding slide canvas
+  light and spacious. In a two-column composition, “панель справа” means a
+  `1fr 1fr` grid with the explanatory text in column 1 and the panel in column
+  2, separated by `theme.spacing`; do not add a decorative border or a second
+  card inside it unless the content requires one.
+- A “цветная панель” means a content block with a theme gradient such as
+  `theme.backgrounds.gradient('accent-1')`, `accent-2`, `accent-3`, or
+  `neutral`. Use accent panels for contrasting concepts, comparisons, steps,
+  or takeaways. Give sibling panels equal visual weight with equal grid tracks,
+  consistent padding, and a small gap; align short labels or key phrases
+  predictably, usually at the top or bottom of every sibling.
+- For “панели на весь слайд” or “накладывающиеся панели”, make the content
+  region a full-height CSS Grid with explicit rows and columns and `padding: 0`.
+  Put the broad background panel first, spanning the complete grid (for
+  example `gridRow: '1 / 4', gridColumn: '1 / 3'`), then place the foreground
+  panel(s) over the same or overlapping tracks. The later grid items are
+  painted above earlier ones, so use DOM order to express the layers rather
+  than absolute positioning.
+- “Одна большая сверху и три снизу” means a two-dimensional grid with one
+  upper content area spanning all columns and a lower row split into three
+  equal columns, typically `gridTemplateColumns: 'repeat(3, 1fr)'` and
+  `gridTemplateRows: '1.2fr 1fr'`. Put the large upper panel/content block on
+  `gridColumn: '1 / 4', gridRow: '1'`; put the three lower panels in columns 1,
+  2, and 3 on row 2. If the lower panels are meant to overlap, add the broad
+  lower background first with `gridColumn: '1 / 4', gridRow: '2'`, then add
+  narrower panels over it with later DOM order.
+- Use small margins such as `4` or `8` on inset foreground panels when the
+  underlying layer should remain visible as a border or reveal. Use
+  `theme.spacings.half` for panel content padding and flex alignment for short
+  labels or questions. Avoid rounded cards, heavy borders, and arbitrary
+  shadows: depth should come from the neutral/gradient layers and the visible
+  overlap.
+- Interpret positional shorthand from the requested composition, not as a
+  request for a generic reusable component: “справа” is a grid placement,
+  “снизу три” is three equal lower tracks, and “накладывающиеся” is an ordered
+  stack of grid items with overlapping areas. Keep the content-bearing layer
+  separate from decorative background panels so text remains readable.
+
 ## GitHub Pages and custom domain
 
 - `.github/workflows/deploy-pages.yml` is the only deployment path. Do not publish manually.

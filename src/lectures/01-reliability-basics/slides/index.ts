@@ -3,12 +3,12 @@ import { Lecture01ReliabilityBasicsSlide01Cover } from './01-cover'
 import { Lecture01ReliabilityBasicsSlide02Reliability } from './02-reliability'
 import { Lecture01ReliabilityBasicsSlide03UserOutcome } from './03-user-outcome'
 import { Lecture01ReliabilityBasicsSlide04Availability } from './04-availability'
-import { Lecture01ReliabilityBasicsSlide06NinesWithoutContext } from './06-nines-without-context'
-import { Lecture01ReliabilityBasicsSlide07ReliabilityAndAvailability } from './07-reliability-and-availability'
-import { Lecture01ReliabilityBasicsSlide08ReliabilityFactors } from './08-reliability-factors'
-import { Lecture01ReliabilityBasicsSlide09DisasterRecovery } from './09-disaster-recovery'
-import { Lecture01ReliabilityBasicsSlide10EngineeringLoop } from './10-engineering-loop'
-import { Lecture01ReliabilityBasicsSlide11SreAndDevops } from './11-sre-and-devops'
+import { Lecture01ReliabilityBasicsSlide05NinesWithoutContext } from './05-nines-without-context'
+import { Lecture01ReliabilityBasicsSlide06ReliabilityAndAvailability } from './06-reliability-and-availability'
+import { Lecture01ReliabilityBasicsSlide07ReliabilityFactors } from './07-reliability-factors'
+import { Lecture01ReliabilityBasicsSlide08DisasterRecovery } from './08-disaster-recovery'
+import { Lecture01ReliabilityBasicsSlide09EngineeringLoop } from './09-engineering-loop'
+import { Lecture01ReliabilityBasicsSlide10SreAndDevops } from './10-sre-and-devops'
 
 export const slides = [
     createElement(Lecture01ReliabilityBasicsSlide01Cover, { key: '01-cover' }),
@@ -21,22 +21,22 @@ export const slides = [
     createElement(Lecture01ReliabilityBasicsSlide04Availability, {
         key: '04-availability'
     }),
-    createElement(Lecture01ReliabilityBasicsSlide06NinesWithoutContext, {
-        key: '06-nines-without-context'
+    createElement(Lecture01ReliabilityBasicsSlide05NinesWithoutContext, {
+        key: '05-nines-without-context'
     }),
-    createElement(Lecture01ReliabilityBasicsSlide07ReliabilityAndAvailability, {
-        key: '07-reliability-and-availability'
+    createElement(Lecture01ReliabilityBasicsSlide06ReliabilityAndAvailability, {
+        key: '06-reliability-and-availability'
     }),
-    createElement(Lecture01ReliabilityBasicsSlide08ReliabilityFactors, {
-        key: '08-reliability-factors'
+    createElement(Lecture01ReliabilityBasicsSlide07ReliabilityFactors, {
+        key: '07-reliability-factors'
     }),
-    createElement(Lecture01ReliabilityBasicsSlide09DisasterRecovery, {
-        key: '09-disaster-recovery'
+    createElement(Lecture01ReliabilityBasicsSlide08DisasterRecovery, {
+        key: '08-disaster-recovery'
     }),
-    createElement(Lecture01ReliabilityBasicsSlide10EngineeringLoop, {
-        key: '10-engineering-loop'
+    createElement(Lecture01ReliabilityBasicsSlide09EngineeringLoop, {
+        key: '09-engineering-loop'
     }),
-    createElement(Lecture01ReliabilityBasicsSlide11SreAndDevops, {
-        key: '11-sre-and-devops'
+    createElement(Lecture01ReliabilityBasicsSlide10SreAndDevops, {
+        key: '10-sre-and-devops'
     })
 ]

@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 import { useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
 
-export function Lecture01ReliabilityBasicsSlide09DisasterRecovery() {
+export function Lecture01ReliabilityBasicsSlide08DisasterRecovery() {
     const theme = useSlidesTheme()
     const statement = css({
         maxWidth: '72rem',
