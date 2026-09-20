@@ -1,4 +1,3 @@
-import { css } from '@emotion/react'
 import { useSlidesTheme } from 'rlz-web-slides'
 import closingIllustration from '../assets/dmitry-maslennikov-questions.png'
 import { LectureContentSlide } from './lecture-content-slide'
