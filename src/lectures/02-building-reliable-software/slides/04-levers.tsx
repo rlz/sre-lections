@@ -51,11 +51,6 @@ export function Lecture02BuildingReliableSoftwareSlide04Levers() {
                     </Panel>
                 ))}
             </div>
-            <p>
-                <strong>Иллюстрация:</strong> одна буря над тремя соседними
-                домами: первый укреплён, второй отделён переборками, у третьего
-                уже разложены инструменты для ремонта.
-            </p>
         </LectureContentSlide>
     )
 }

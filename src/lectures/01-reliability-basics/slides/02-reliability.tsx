@@ -147,7 +147,8 @@ export function Lecture01ReliabilityBasicsSlide02Reliability() {
                 <div
                     css={[
                         {
-                            gridColumn: '3'
+                            gridColumn: '3',
+                            color: theme.colors.textDark
                         },
                         colorBoxCss
                     ]}
