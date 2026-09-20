@@ -65,9 +65,9 @@ export function Lecture01ReliabilityBasicsSlide07ReliabilityFactors() {
 
     return (
         <LectureContentSlide number={1}>
-            <h1>Как добиться надежности</h1>
+            <h1>Как добиться надёжности</h1>
             <p>
-                Надежность обеспечивается совокупностью всех процессов
+                Надёжность обеспечивается совокупностью всех процессов
                 разработки и эксплуатации
             </p>
             <div
@@ -88,7 +88,7 @@ export function Lecture01ReliabilityBasicsSlide07ReliabilityFactors() {
                 {makeLine(2, [
                     'Внесение изменений (процессы и скорость)',
                     'Обеспеченность ресурсами',
-                    'Внешние партнеры/среда'
+                    'Внешние партнёры/среда'
                 ])}
                 {makeLine(3, [
                     'Команда, обученность',

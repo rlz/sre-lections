@@ -9,7 +9,7 @@ export function Lecture02BuildingReliableSoftwareSlide01Cover() {
         <LectureCoverSlide
             number={2}
             title="О сбоях и принципах SRE"
-            summary="Поговорим о сбоях, зачем ими заниматься, как повышать надежность и инженерных принципах SRE."
+            summary="Поговорим о сбоях, зачем ими заниматься, как повышать надёжность и об инженерных принципах SRE."
             panelPadding={0}
         >
             <div
