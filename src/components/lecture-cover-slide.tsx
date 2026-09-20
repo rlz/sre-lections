@@ -11,12 +11,14 @@ interface LectureCoverSlideProps extends PropsWithChildren {
     number: number
     title: string
     summary: string
+    panelPadding?: number
 }
 
 export function LectureCoverSlide({
     number,
     title: lectureTitle,
     summary: lectureSummary,
+    panelPadding,
     children
 }: LectureCoverSlideProps) {
     const theme = useSlidesTheme()
@@ -47,7 +49,15 @@ export function LectureCoverSlide({
                     <h1>{lectureTitle}</h1>
                     <p css={{ marginTop: 40 }}>{lectureSummary}</p>
                 </div>
-                <Panel css={{ gridColumn: '2' }}>{children}</Panel>
+                <Panel
+                    css={
+                        panelPadding === undefined
+                            ? { gridColumn: '2' }
+                            : { gridColumn: '2', padding: panelPadding }
+                    }
+                >
+                    {children}
+                </Panel>
             </div>
         </DecoratedSlide>
     )

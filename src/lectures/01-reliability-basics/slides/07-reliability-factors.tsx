@@ -16,7 +16,7 @@ export function Lecture01ReliabilityBasicsSlide07ReliabilityFactors() {
             <Panel
                 key={`${row}-1`}
                 css={[
-                    { gridColumn: '2 / 4', gridRow: row },
+                    { gridColumn: '2 / 4', gridRow: row, margin: 4 },
                     theme.backgrounds.gradient(`accent-${row}`)
                 ]}
             />,
@@ -52,7 +52,8 @@ export function Lecture01ReliabilityBasicsSlide07ReliabilityFactors() {
                         gridColumn: '3',
                         gridRow: row,
                         display: 'flex',
-                        alignItems: 'center'
+                        alignItems: 'center',
+                        margin: 8
                     },
                     theme.backgrounds.gradient('dark')
                 ]}
