@@ -9,16 +9,25 @@ function lectureIdFromHash() {
     return match?.[1]
 }
 
-function navigate(path: string) {
-    window.location.hash = path
-}
-
 function CourseHeader() {
+    const firstLecture = lectures[0]
+
     return (
-        <header className="site-header">
-            <a className="brand" href="#/" onClick={() => navigate('/')}>
+        <header className="lecture-toolbar">
+            <a className="lecture-toolbar__brand" href="#/">
                 SRE — лекции
             </a>
+            <h1 className="lecture-toolbar__title">Список лекций</h1>
+            <nav className="lecture-toolbar__navigation" aria-label="Лекции">
+                <span aria-hidden="true">←</span>
+                <a
+                    href={`#/lectures/${firstLecture.id}`}
+                    aria-label="Следующая: лекция 1"
+                    title="Лекция 1"
+                >
+                    →
+                </a>
+            </nav>
         </header>
     )
 }
@@ -123,17 +132,25 @@ function LecturePage({ lecture }: { lecture: Lecture }) {
                     className="lecture-toolbar__navigation"
                     aria-label="Лекции"
                 >
-                    {previousLecture ? (
-                        <a
-                            href={`#/lectures/${previousLecture.id}`}
-                            aria-label={`Предыдущая: лекция ${previousLecture.number}`}
-                            title={`Лекция ${previousLecture.number}`}
-                        >
-                            ←
-                        </a>
-                    ) : (
-                        <span aria-hidden="true">←</span>
-                    )}
+                    <a
+                        href={
+                            previousLecture
+                                ? `#/lectures/${previousLecture.id}`
+                                : '#/'
+                        }
+                        aria-label={
+                            previousLecture
+                                ? `Предыдущая: лекция ${previousLecture.number}`
+                                : 'Предыдущая: список лекций'
+                        }
+                        title={
+                            previousLecture
+                                ? `Лекция ${previousLecture.number}`
+                                : 'Список лекций'
+                        }
+                    >
+                        ←
+                    </a>
                     {nextLecture ? (
                         <a
                             href={`#/lectures/${nextLecture.id}`}
