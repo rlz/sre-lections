@@ -1,5 +1,5 @@
-import { LectureContentSlide } from '../../../components/lecture-content-slide'
+import { LectureClosingSlide } from '../../../components/lecture-closing-slide'
 
 export function Lecture01ReliabilityBasicsSlide09Closing() {
-    return <LectureContentSlide number={1}>{null}</LectureContentSlide>
+    return <LectureClosingSlide number={1} />
 }
