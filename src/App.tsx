@@ -17,7 +17,7 @@ function CourseHeader() {
     return (
         <header className="site-header">
             <a className="brand" href="#/" onClick={() => navigate('/')}>
-                курс лекций
+                SRE — лекции
             </a>
         </header>
     )
@@ -108,14 +108,46 @@ function CourseIndex() {
 
 function LecturePage({ lecture }: { lecture: Lecture }) {
     const Notes = lecture.Notes
+    const lectureIndex = lectures.indexOf(lecture)
+    const previousLecture = lectures[lectureIndex - 1]
+    const nextLecture = lectures[lectureIndex + 1]
 
     return (
         <article className="lecture-page">
-            <a className="back-link" href="#/">
-                ← Все лекции
-            </a>
+            <header className="lecture-toolbar">
+                <a className="lecture-toolbar__brand" href="#/">
+                    SRE — лекции
+                </a>
+                <span>Лекция {lecture.number}</span>
+                <nav
+                    className="lecture-toolbar__navigation"
+                    aria-label="Лекции"
+                >
+                    {previousLecture ? (
+                        <a
+                            href={`#/lectures/${previousLecture.id}`}
+                            aria-label={`Предыдущая: лекция ${previousLecture.number}`}
+                            title={`Лекция ${previousLecture.number}`}
+                        >
+                            ←
+                        </a>
+                    ) : (
+                        <span aria-hidden="true">←</span>
+                    )}
+                    {nextLecture ? (
+                        <a
+                            href={`#/lectures/${nextLecture.id}`}
+                            aria-label={`Следующая: лекция ${nextLecture.number}`}
+                            title={`Лекция ${nextLecture.number}`}
+                        >
+                            →
+                        </a>
+                    ) : (
+                        <span aria-hidden="true">→</span>
+                    )}
+                </nav>
+            </header>
             <header className="lecture-page__header">
-                <p className="eyebrow">Лекция {lecture.number}</p>
                 <h1>{lecture.title}</h1>
                 <p>{lecture.summary}</p>
             </header>
@@ -148,8 +180,14 @@ export function App() {
 
     return (
         <main className="site-shell">
-            <CourseHeader />
-            {lecture ? <LecturePage lecture={lecture} /> : <CourseIndex />}
+            {lecture ? (
+                <LecturePage lecture={lecture} />
+            ) : (
+                <>
+                    <CourseHeader />
+                    <CourseIndex />
+                </>
+            )}
         </main>
     )
 }

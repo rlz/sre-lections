@@ -6,7 +6,7 @@ import './styles.css'
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
-        <SlidesThemeProvider>
+        <SlidesThemeProvider theme={{ radius: 20 }}>
             <App />
         </SlidesThemeProvider>
     </StrictMode>
