@@ -154,8 +154,8 @@ export function Lecture01ReliabilityBasicsSlide02Reliability() {
                 >
                     <div css={numberCss}>3</div>
                     <div>
-                        Первый вопрос, с которого надо начать: а надёжность{' '}
-                        <strong>чего именно</strong> мы обеспечиваем?
+                        Третий сложный вопрос: а как вообще это можно{' '}
+                        <strong>измерять</strong>?
                     </div>
                 </div>
             </Panel>
