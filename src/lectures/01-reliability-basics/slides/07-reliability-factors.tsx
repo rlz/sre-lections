@@ -1,62 +1,99 @@
-import { css } from '@emotion/react'
-import { useSlidesTheme } from 'rlz-web-slides'
+import { Panel, useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
 
 export function Lecture01ReliabilityBasicsSlide07ReliabilityFactors() {
     const theme = useSlidesTheme()
-    const factors = css({
-        display: 'grid',
-        gridTemplateColumns: 'repeat(3, 1fr)',
-        gap: '1rem',
-        maxWidth: '76rem'
-    })
-    const factor = css({
-        minHeight: '5.4rem',
-        padding: theme.spacings.half,
-        display: 'flex',
-        alignItems: 'flex-end',
-        fontSize: '1.05em',
-        fontWeight: 700
-    })
-    const factorStyles = [
-        theme.backgrounds.gradient('accent-1'),
-        theme.backgrounds.gradient('accent-2'),
-        theme.backgrounds.gradient('accent-3')
-    ]
+
+    const makeLine = (row: number, text: string[]) => {
+        return [
+            <Panel
+                key={`${row}-0`}
+                css={[
+                    { gridColumn: '1 / 4', gridRow: row },
+                    theme.backgrounds.gradient('light')
+                ]}
+            />,
+            <Panel
+                key={`${row}-1`}
+                css={[
+                    { gridColumn: '2 / 4', gridRow: row },
+                    theme.backgrounds.gradient(`accent-${row}`)
+                ]}
+            />,
+            <div
+                key={`${row}-2`}
+                css={{
+                    gridColumn: '1',
+                    gridRow: row,
+                    padding: theme.spacings.half,
+                    display: 'flex',
+                    alignItems: 'center'
+                }}
+            >
+                {text[0]}
+            </div>,
+            <div
+                key={`${row}-3`}
+                css={{
+                    gridColumn: '2',
+                    gridRow: row,
+                    padding: theme.spacings.half,
+                    display: 'flex',
+                    alignItems: 'center',
+                    color: theme.backgrounds.gradient(`accent-${row}`).color
+                }}
+            >
+                {text[1]}
+            </div>,
+            <Panel
+                key={`${row}-4`}
+                css={[
+                    {
+                        gridColumn: '3',
+                        gridRow: row,
+                        display: 'flex',
+                        alignItems: 'center'
+                    },
+                    theme.backgrounds.gradient('dark')
+                ]}
+            >
+                {text[2]}
+            </Panel>
+        ]
+    }
 
     return (
         <LectureContentSlide number={1}>
-            <h1
+            <h1>Как добиться надежности</h1>
+            <p>
+                Надежность обеспечивается совокупностью всех процессов
+                разработки и эксплуатации
+            </p>
+            <div
                 css={{
-                    maxWidth: '78%',
-                    margin: '0 0 2.8rem',
-                    color: theme.colors.textLight
+                    display: 'grid',
+                    rowGap: theme.spacings.tight,
+                    gridTemplateColumns: '1fr 1fr 1fr',
+                    gridTemplateRows: '1fr 1fr 1fr',
+                    flex: 1,
+                    marginTop: '1em'
                 }}
             >
-                Надёжность зависит от всей системы
-            </h1>
-            <div css={factors}>
-                <div css={[factor, factorStyles[0]]}>
-                    Архитектура, код, оборудование
-                </div>
-                <div css={[factor, factorStyles[1]]}>
-                    Объём и характер нагрузки
-                </div>
-                <div css={[factor, factorStyles[2]]}>
-                    Ресурсы и запас мощности
-                </div>
-                <div css={[factor, factorStyles[0]]}>
-                    Внешняя среда и партнёры
-                </div>
-                <div css={[factor, factorStyles[1]]}>
-                    Скорость и безопасность изменений
-                </div>
-                <div css={[factor, factorStyles[2]]}>
-                    Наблюдаемость и дежурства
-                </div>
-                <div css={[factor, factorStyles[0]]}>
-                    Люди, знания и процессы
-                </div>
+                {makeLine(1, [
+                    'Архитектура и код',
+                    'Оборудование',
+                    'Готовность выдерживать нагрузку'
+                ])}
+                {makeLine(2, [
+                    'Внесение изменений (процессы и скорость)',
+                    'Обеспеченность ресурсами',
+                    'Внешние партнеры/среда'
+                ])}
+                {makeLine(3, [
+                    'Команда, обученность',
+                    'Процессы разработки и эксплуатации',
+                    'Готовность к реагированию на катастрофы'
+                ])}
             </div>
         </LectureContentSlide>
     )
