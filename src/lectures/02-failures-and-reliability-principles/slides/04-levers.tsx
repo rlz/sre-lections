@@ -5,7 +5,7 @@ import architectureWhiteboard from '../assets/03-architecture-whiteboard.png'
 import geoDistribution from '../assets/04-geo-distribution.png'
 import redRoom from '../assets/05-red-room.png'
 
-export function Lecture02BuildingReliableSoftwareSlide04Levers() {
+export function Lecture02FailuresAndReliabilityPrinciplesSlide04Levers() {
     const theme = useSlidesTheme()
     const panels = [
         {

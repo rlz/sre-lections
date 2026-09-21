@@ -1,7 +1,7 @@
 import { Panel, useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
 
-export function Lecture02BuildingReliableSoftwareSlide13Antifragility() {
+export function Lecture02FailuresAndReliabilityPrinciplesSlide08Principles() {
     const theme = useSlidesTheme()
 
     return (
@@ -23,15 +23,11 @@ export function Lecture02BuildingReliableSoftwareSlide13Antifragility() {
                             marginTop: '2em !important'
                         }}
                     >
-                        Антихрупкость
+                        Надежда — не стратегия
                     </p>
                 </div>
                 <Panel css={{ height: '100%' }}>
-                    <p>
-                        Термин <strong>Нассима Талеба</strong>, как и «чёрный
-                        лебедь». Антихрупкость — следующий шаг после
-                        устойчивости: сбой даёт материал для улучшений.
-                    </p>
+                    <p>Основной девиз SRE в Google</p>
                 </Panel>
             </div>
         </LectureContentSlide>

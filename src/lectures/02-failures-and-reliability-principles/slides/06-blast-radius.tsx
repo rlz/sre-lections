@@ -2,7 +2,7 @@ import { Panel } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
 import shipCompartments from '../assets/06-ship-compartments.png'
 
-export function Lecture02BuildingReliableSoftwareSlide06BlastRadius() {
+export function Lecture02FailuresAndReliabilityPrinciplesSlide06BlastRadius() {
     return (
         <LectureContentSlide number={2}>
             <Panel>

@@ -2,7 +2,7 @@ import { Panel, useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
 import blackSwan from '../assets/08-black-swan.png'
 
-export function Lecture02BuildingReliableSoftwareSlide12BlackSwan() {
+export function Lecture02FailuresAndReliabilityPrinciplesSlide11BlackSwan() {
     const theme = useSlidesTheme()
 
     return (

@@ -1,7 +1,7 @@
 import { Panel, useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
 
-export function Lecture02BuildingReliableSoftwareSlide03DirectCost() {
+export function Lecture02FailuresAndReliabilityPrinciplesSlide03DirectCost() {
     const theme = useSlidesTheme()
 
     return (

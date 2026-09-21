@@ -1,7 +1,7 @@
 import { Panel, useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
 
-export function Lecture02BuildingReliableSoftwareSlide11DoNotTouch() {
+export function Lecture02FailuresAndReliabilityPrinciplesSlide13BlamelessCulture() {
     const theme = useSlidesTheme()
 
     return (
@@ -23,15 +23,14 @@ export function Lecture02BuildingReliableSoftwareSlide11DoNotTouch() {
                             marginTop: '2em !important'
                         }}
                     >
-                        «Работает — не трогай»
+                        Необвинительная культура
                     </p>
                 </div>
                 <Panel css={{ height: '100%' }}>
                     <p>
-                        Периодически <strong>шатать систему</strong> полезно:
-                        обновлять зависимости, проверять восстановление,
-                        проводить учения. Так сохраняются знания и навык
-                        действовать в реальной аварии.
+                        Открытый разговор об ошибках помогает учиться и замечать
+                        риски раньше. Он не отменяет ответственности за
+                        намеренные действия, халатность или отказ учиться.
                     </p>
                 </Panel>
             </div>

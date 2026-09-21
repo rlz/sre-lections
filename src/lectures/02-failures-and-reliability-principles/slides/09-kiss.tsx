@@ -2,7 +2,7 @@ import { Panel, useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
 import kissBand from '../assets/09-kiss-band.png'
 
-export function Lecture02BuildingReliableSoftwareSlide10Kiss() {
+export function Lecture02FailuresAndReliabilityPrinciplesSlide09Kiss() {
     const theme = useSlidesTheme()
 
     return (

@@ -1,5 +1,5 @@
 import { lecture01ReliabilityBasics } from './01-reliability-basics/01-reliability-basics'
-import { lecture02BuildingReliableSoftware } from './02-building-reliable-software/02-building-reliable-software'
+import { lecture02FailuresAndReliabilityPrinciples } from './02-failures-and-reliability-principles/02-failures-and-reliability-principles'
 import { lecture03DistributedSystems } from './03-distributed-systems/03-distributed-systems'
 import { lecture04ReliableArchitecture } from './04-reliable-architecture/04-reliable-architecture'
 import { lecture05MicroservicesAndOperations } from './05-microservices-and-operations/05-microservices-and-operations'
@@ -23,7 +23,7 @@ export type { Lecture } from './types'
 
 export const lectures: ReadonlyArray<Lecture> = [
     lecture01ReliabilityBasics,
-    lecture02BuildingReliableSoftware,
+    lecture02FailuresAndReliabilityPrinciples,
     lecture03DistributedSystems,
     lecture04ReliableArchitecture,
     lecture05MicroservicesAndOperations,

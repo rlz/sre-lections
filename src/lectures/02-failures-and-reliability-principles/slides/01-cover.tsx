@@ -2,7 +2,7 @@ import { LectureCoverSlide } from '../../../components/lecture-cover-slide'
 import { useSlidesTheme } from 'rlz-web-slides'
 import outageImpact from '../assets/01-outage-impact.png'
 
-export function Lecture02BuildingReliableSoftwareSlide01Cover() {
+export function Lecture02FailuresAndReliabilityPrinciplesSlide01Cover() {
     const theme = useSlidesTheme()
 
     return (

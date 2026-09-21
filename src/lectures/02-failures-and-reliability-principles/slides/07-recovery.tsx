@@ -4,7 +4,7 @@ import { LectureContentSlide } from '../../../components/lecture-content-slide'
 import { colord } from 'colord'
 import warRoomRecovery from '../assets/07-war-room-recovery.png'
 
-export function Lecture02BuildingReliableSoftwareSlide07Recovery() {
+export function Lecture02FailuresAndReliabilityPrinciplesSlide07Recovery() {
     const theme = useSlidesTheme()
     const numberCss = css([
         theme.backgrounds.gradient('neutral'),

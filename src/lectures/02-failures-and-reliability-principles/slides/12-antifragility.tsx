@@ -1,7 +1,7 @@
 import { Panel, useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
 
-export function Lecture02BuildingReliableSoftwareSlide14BlamelessCulture() {
+export function Lecture02FailuresAndReliabilityPrinciplesSlide12Antifragility() {
     const theme = useSlidesTheme()
 
     return (
@@ -23,14 +23,14 @@ export function Lecture02BuildingReliableSoftwareSlide14BlamelessCulture() {
                             marginTop: '2em !important'
                         }}
                     >
-                        Необвинительная культура
+                        Антихрупкость
                     </p>
                 </div>
                 <Panel css={{ height: '100%' }}>
                     <p>
-                        Открытый разговор об ошибках помогает учиться и замечать
-                        риски раньше. Он не отменяет ответственности за
-                        намеренные действия, халатность или отказ учиться.
+                        Термин <strong>Нассима Талеба</strong>, как и «чёрный
+                        лебедь». Антихрупкость — следующий шаг после
+                        устойчивости: сбой даёт материал для улучшений.
                     </p>
                 </Panel>
             </div>

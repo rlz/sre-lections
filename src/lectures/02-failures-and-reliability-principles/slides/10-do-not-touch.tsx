@@ -1,7 +1,7 @@
 import { Panel, useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
 
-export function Lecture02BuildingReliableSoftwareSlide09Principles() {
+export function Lecture02FailuresAndReliabilityPrinciplesSlide10DoNotTouch() {
     const theme = useSlidesTheme()
 
     return (
@@ -23,11 +23,16 @@ export function Lecture02BuildingReliableSoftwareSlide09Principles() {
                             marginTop: '2em !important'
                         }}
                     >
-                        Надежда — не стратегия
+                        «Работает — не трогай»
                     </p>
                 </div>
                 <Panel css={{ height: '100%' }}>
-                    <p>Основной девиз SRE в Google</p>
+                    <p>
+                        Периодически <strong>шатать систему</strong> полезно:
+                        обновлять зависимости, проверять восстановление,
+                        проводить учения. Так сохраняются знания и навык
+                        действовать в реальной аварии.
+                    </p>
                 </Panel>
             </div>
         </LectureContentSlide>
