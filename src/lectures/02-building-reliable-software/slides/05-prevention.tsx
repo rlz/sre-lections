@@ -79,7 +79,7 @@ export function Lecture02BuildingReliableSoftwareSlide05Prevention() {
                         padding: theme.spacings.half
                     }}
                 >
-                    Надежное тестирование
+                    Надёжное тестирование
                 </div>
                 <Panel
                     css={[
@@ -116,11 +116,11 @@ export function Lecture02BuildingReliableSoftwareSlide05Prevention() {
                     </p>
                     <p>
                         Много сбоев происходит от того, что кто-то чего-то не
-                        знал, или не правильно понял.
+                        знал или неправильно понял.
                     </p>
                     <p>
                         Документация может быть отсутствующей, неполной,
-                        устаревшей, неверной, избыточной.
+                        устаревшей, неверной или избыточной.
                     </p>
                 </Panel>
             </div>
