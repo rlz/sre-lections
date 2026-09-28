@@ -4,9 +4,15 @@ import { LectureContentSlide } from './lecture-content-slide'
 
 interface LectureClosingSlideProps {
     number: number
+    illustration?: string | null
+    illustrationAlt?: string
 }
 
-export function LectureClosingSlide({ number }: LectureClosingSlideProps) {
+export function LectureClosingSlide({
+    number,
+    illustration = closingIllustration,
+    illustrationAlt = 'Дмитрий Масленников приглашает задавать вопросы'
+}: LectureClosingSlideProps) {
     const theme = useSlidesTheme()
 
     return (
@@ -20,7 +26,12 @@ export function LectureClosingSlide({ number }: LectureClosingSlideProps) {
                     alignItems: 'center'
                 }}
             >
-                <div>
+                <div
+                    css={{
+                        alignSelf: 'end',
+                        paddingBottom: theme.spacings.half
+                    }}
+                >
                     <h1>На этом пока все! Вопросы?</h1>
                 </div>
                 <div
@@ -31,15 +42,23 @@ export function LectureClosingSlide({ number }: LectureClosingSlideProps) {
                         justifyContent: 'center'
                     }}
                 >
-                    <img
-                        src={closingIllustration}
-                        alt="Дмитрий Масленников приглашает задавать вопросы"
-                        css={{
-                            maxWidth: '100%',
-                            maxHeight: '100%',
-                            objectFit: 'contain'
-                        }}
-                    />
+                    {illustration ? (
+                        <img
+                            src={illustration}
+                            alt={illustrationAlt}
+                            css={{
+                                maxWidth: '100%',
+                                maxHeight: '100%',
+                                width: 'auto',
+                                height: 'auto'
+                            }}
+                        />
+                    ) : (
+                        <div
+                            aria-label="Место для иллюстрации"
+                            css={{ width: '100%', height: '100%' }}
+                        />
+                    )}
                 </div>
             </div>
         </LectureContentSlide>

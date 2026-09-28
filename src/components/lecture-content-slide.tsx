@@ -19,8 +19,7 @@ export function LectureContentSlide({
         display: 'flex',
         height: '100%',
         flexDirection: 'column',
-        justifyContent: 'center',
-        padding: '1rem 0 1rem'
+        justifyContent: 'center'
     })
     return (
         <DecoratedSlide

@@ -7,7 +7,7 @@ export const lecture03DistributedSystems: Lecture = {
     number: 3,
     title: 'Распределённые системы',
     summary:
-        'Консенсус, CAP/PACELC и практические компромиссы распределённой архитектуры.',
+        'CAP/PACELC и практические компромиссы распределённой архитектуры.',
     duration: '90 минут',
     status: 'available',
     Notes: Lecture03DistributedSystemsNotes,
