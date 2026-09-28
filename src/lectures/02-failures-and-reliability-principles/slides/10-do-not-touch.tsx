@@ -28,7 +28,8 @@ export function Lecture02FailuresAndReliabilityPrinciplesSlide10DoNotTouch() {
                 </div>
                 <Panel css={{ height: '100%' }}>
                     <p>
-                        Периодически <strong>шатать систему</strong> полезно:
+                        Полезно{' '}
+                        <strong>проверять готовность к изменениям</strong>:
                         обновлять зависимости, проверять восстановление,
                         проводить учения. Так сохраняются знания и навык
                         действовать в реальной аварии.

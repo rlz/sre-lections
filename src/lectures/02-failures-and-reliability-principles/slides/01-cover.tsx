@@ -9,7 +9,7 @@ export function Lecture02FailuresAndReliabilityPrinciplesSlide01Cover() {
         <LectureCoverSlide
             number={2}
             title="О сбоях и принципах SRE"
-            summary="Поговорим о сбоях, зачем ими заниматься, как повышать надёжность и об инженерных принципах SRE."
+            summary="Поговорим о цене сбоев, способах повышения надёжности и инженерных принципах SRE."
             panelPadding={0}
         >
             <div
@@ -36,7 +36,7 @@ export function Lecture02FailuresAndReliabilityPrinciplesSlide01Cover() {
                 <div css={{ padding: theme.spacings.half }}>
                     <ul>
                         <li>Что считать сбоем</li>
-                        <li>Дорого ли стоят сбои?</li>
+                        <li>Сколько стоят сбои</li>
                         <li>
                             Как уменьшать число, масштаб и длительность сбоев
                         </li>

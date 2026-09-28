@@ -27,7 +27,7 @@ export function Lecture02FailuresAndReliabilityPrinciplesSlide08Principles() {
                     </p>
                 </div>
                 <Panel css={{ height: '100%' }}>
-                    <p>Основной девиз SRE в Google</p>
+                    <p>Неофициальный девиз SRE в Google</p>
                 </Panel>
             </div>
         </LectureContentSlide>

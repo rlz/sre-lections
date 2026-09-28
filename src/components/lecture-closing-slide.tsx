@@ -32,7 +32,7 @@ export function LectureClosingSlide({
                         paddingBottom: theme.spacings.half
                     }}
                 >
-                    <h1>На этом пока все! Вопросы?</h1>
+                    <h1>На этом пока всё! Вопросы?</h1>
                 </div>
                 <div
                     css={{

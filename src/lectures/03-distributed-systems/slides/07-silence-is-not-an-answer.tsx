@@ -34,8 +34,8 @@ export function Lecture03DistributedSystemsSlide07SilenceIsNotAnAnswer() {
                     <div css={{ padding: theme.spacings.half }}>
                         <h1>Проблема таймаута</h1>
                         <p>
-                            Если ответа нет, спрашивающий узел не знает, на
-                            каком этапе всё остановилось.
+                            Если ответа нет, узел-отправитель не знает, на каком
+                            этапе всё остановилось.
                         </p>
                     </div>
                     <img

@@ -32,7 +32,7 @@ export function Lecture03DistributedSystemsSlide06WhatItMeansForASystemToAgree()
                         flexDirection: 'column'
                     }}
                 >
-                    <h1>Что значит договориться системе</h1>
+                    <h1>Что значит «договориться» для системы</h1>
                     <p>
                         Несколько узлов должны принять{' '}
                         <strong>одно и то же решение</strong>, даже если
@@ -71,8 +71,8 @@ export function Lecture03DistributedSystemsSlide06WhatItMeansForASystemToAgree()
                 >
                     <h2>Общее решение</h2>
                     <p>
-                        Важно не только выбрать значение, но и чтобы узлы знали,
-                        что решение принято и совпадает.
+                        Узлы, принявшие решение, должны выбрать одно значение.
+                        Исправные узлы должны в итоге получить результат.
                     </p>
                 </Panel>
                 <div

@@ -11,7 +11,7 @@ export function Lecture02FailuresAndReliabilityPrinciplesSlide04Levers() {
         {
             number: '1',
             title: 'Меньше сбоев',
-            text: 'Предусмотреть проблемы в архитектуре, коде, тестировании и изменениях.',
+            text: 'Учитывать отказы при проектировании, разработке, тестировании и выпуске изменений.',
             image: architectureWhiteboard,
             imageAlt: 'Студент проектирует архитектуру сервиса у доски',
             background: 'accent-1' as const,
@@ -30,10 +30,11 @@ export function Lecture02FailuresAndReliabilityPrinciplesSlide04Levers() {
         },
         {
             number: '3',
-            title: 'Короче восстановление',
-            text: 'Раньше заметить проблему и быстрее вернуть пользователям результат.',
+            title: 'Быстрее восстановление',
+            text: 'Раньше заметить проблему и быстрее восстановить работу сервиса.',
             image: redRoom,
-            imageAlt: 'Команда с нашим студентом устраняет сбой в red room',
+            imageAlt:
+                'Команда с нашим студентом устраняет сбой в комнате реагирования на сбой',
             background: 'accent-3' as const,
             backgroundColumn: '3',
             inset: 12
