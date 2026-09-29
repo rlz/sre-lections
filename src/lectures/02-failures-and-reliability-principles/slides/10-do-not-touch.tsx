@@ -20,7 +20,8 @@ export function Lecture02FailuresAndReliabilityPrinciplesSlide10DoNotTouch() {
                         css={{
                             fontSize: '3em',
                             textAlign: 'center',
-                            marginTop: '2em !important'
+                            marginTop: '2em !important',
+                            textDecoration: 'line-through'
                         }}
                     >
                         «Работает — не трогай»
