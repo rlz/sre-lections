@@ -6,17 +6,17 @@ export function Lecture03DistributedSystemsSlide10CapProperties() {
     const blocks = [
         {
             letter: 'C',
-            title: 'Согласованность',
+            title: 'Consistency · согласованность',
             text: 'Операции выглядят как выполненные по одной, с соблюдением их порядка в реальном времени.'
         },
         {
             letter: 'A',
-            title: 'Доступность',
+            title: 'Availability · доступность',
             text: 'Каждый корректный запрос к исправному узлу в итоге получает результат, а не отказ.'
         },
         {
             letter: 'P',
-            title: 'Устойчивость к разделению сети',
+            title: 'Partition tolerance · устойчивость к разделению сети',
             text: 'Система должна учитывать потерю связи между группами узлов.'
         }
     ]

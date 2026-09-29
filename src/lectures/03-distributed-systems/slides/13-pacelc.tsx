@@ -38,6 +38,10 @@ export function Lecture03DistributedSystemsSlide13Pacelc() {
                     }}
                 >
                     <h1>PACELC: выбор при сбое и в обычной работе</h1>
+                    <p css={{ margin: 0 }}>
+                        P — Partition · A — Availability · C — Consistency · E —
+                        Else · L — Latency · C — Consistency
+                    </p>
                 </div>
                 <Panel
                     css={[
