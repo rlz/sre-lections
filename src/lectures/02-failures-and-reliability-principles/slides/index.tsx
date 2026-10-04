@@ -13,6 +13,7 @@ import { Lecture02FailuresAndReliabilityPrinciplesSlide12Antifragility } from '.
 import { Lecture02FailuresAndReliabilityPrinciplesSlide13BlamelessCulture } from './13-blameless-culture'
 import { LectureClosingSlide } from '../../../components/lecture-closing-slide'
 import closingIllustration from '../assets/14-closing-author.png'
+import { LectureFeedbackSlide } from '../../../components/lecture-feedback-slide'
 
 export const slides = [
     <Lecture02FailuresAndReliabilityPrinciplesSlide01Cover key="01-cover" />,
@@ -32,5 +33,6 @@ export const slides = [
         key="14-closing"
         number={2}
         illustration={closingIllustration}
-    />
+    />,
+    <LectureFeedbackSlide key="15-feedback" number={2} />
 ]

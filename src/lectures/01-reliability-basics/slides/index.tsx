@@ -7,6 +7,7 @@ import { Lecture01ReliabilityBasicsSlide06ReliabilityAndAvailability } from './0
 import { Lecture01ReliabilityBasicsSlide07ReliabilityFactors } from './07-reliability-factors'
 import { Lecture01ReliabilityBasicsSlide08SreAndDevops } from './08-sre-and-devops'
 import { Lecture01ReliabilityBasicsSlide09Closing } from './09-closing'
+import { LectureFeedbackSlide } from '../../../components/lecture-feedback-slide'
 
 export const slides = [
     <Lecture01ReliabilityBasicsSlide01Cover key="01-cover" />,
@@ -17,5 +18,6 @@ export const slides = [
     <Lecture01ReliabilityBasicsSlide06ReliabilityAndAvailability key="06-reliability-and-availability" />,
     <Lecture01ReliabilityBasicsSlide07ReliabilityFactors key="07-reliability-factors" />,
     <Lecture01ReliabilityBasicsSlide08SreAndDevops key="08-sre-and-devops" />,
-    <Lecture01ReliabilityBasicsSlide09Closing key="09-closing" />
+    <Lecture01ReliabilityBasicsSlide09Closing key="09-closing" />,
+    <LectureFeedbackSlide key="10-feedback" number={1} />
 ]

@@ -12,6 +12,7 @@ import { Lecture03DistributedSystemsSlide11CapTradeoff } from './11-cap-tradeoff
 import { Lecture03DistributedSystemsSlide12MobileOffline } from './12-mobile-offline'
 import { Lecture03DistributedSystemsSlide13Pacelc } from './13-pacelc'
 import { Lecture03DistributedSystemsSlide14Closing } from './14-closing'
+import { LectureFeedbackSlide } from '../../../components/lecture-feedback-slide'
 
 export const slides = [
     <Lecture03DistributedSystemsSlide01Cover key="01-cover" />,
@@ -27,5 +28,6 @@ export const slides = [
     <Lecture03DistributedSystemsSlide11CapTradeoff key="11-cap-tradeoff" />,
     <Lecture03DistributedSystemsSlide12MobileOffline key="12-mobile-offline" />,
     <Lecture03DistributedSystemsSlide13Pacelc key="13-pacelc" />,
-    <Lecture03DistributedSystemsSlide14Closing key="14-closing" />
+    <Lecture03DistributedSystemsSlide14Closing key="14-closing" />,
+    <LectureFeedbackSlide key="15-feedback" number={3} />
 ]
