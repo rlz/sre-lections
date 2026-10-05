@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 import { Panel, useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
 import { colord } from 'colord'
-import warRoomRecovery from '../assets/07-war-room-recovery.png'
+import warRoomRecovery from '../assets/07-war-room-recovery.jpg'
 
 export function Lecture02FailuresAndReliabilityPrinciplesSlide07Recovery() {
     const theme = useSlidesTheme()
@@ -64,7 +64,7 @@ export function Lecture02FailuresAndReliabilityPrinciplesSlide07Recovery() {
                         css={[
                             {
                                 display: 'block',
-                                margin: '0 auto',
+                                margin: `${theme.spacings.half}px auto`,
                                 width: '60%',
                                 borderRadius: theme.radius
                             },

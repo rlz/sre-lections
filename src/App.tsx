@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Presentation } from 'rlz-web-slides'
-import authorPhoto from './assets/dmitry-maslennikov.png'
+import authorPhoto from './assets/dmitry-maslennikov.jpg'
 import telegramQr from './assets/telegram-sre-pub-qr.svg'
 import { findLecture, lectures, type Lecture } from './lectures'
 

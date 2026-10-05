@@ -1,6 +1,6 @@
 import { useSlidesTheme } from 'rlz-web-slides'
 import { LectureCoverSlide } from '../../../components/lecture-cover-slide'
-import architectureIllustration from '../assets/01-cover-architecture.png'
+import architectureIllustration from '../assets/01-cover-architecture.jpg'
 
 export function Lecture04ReliableArchitectureSlide01Cover() {
     const theme = useSlidesTheme()

@@ -1,6 +1,6 @@
 import { Panel, useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
-import dataCenter from '../assets/02-data-center-v4.png'
+import dataCenter from '../assets/02-data-center-v4.jpg'
 
 export function Lecture03DistributedSystemsSlide02ServiceIsNotOneComputer() {
     const theme = useSlidesTheme()

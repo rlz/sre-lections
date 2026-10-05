@@ -1,6 +1,6 @@
 import { useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
-import mobileOffline from '../assets/12-mobile-offline.png'
+import mobileOffline from '../assets/12-mobile-offline.jpg'
 
 export function Lecture03DistributedSystemsSlide12MobileOffline() {
     const theme = useSlidesTheme()

@@ -1,7 +1,7 @@
 import { Panel, useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
-import reliabilityArchitecture from '../assets/04-reliability-architecture.png'
-import availabilityDashboard from '../assets/05-availability-dashboard.png'
+import reliabilityArchitecture from '../assets/04-reliability-architecture.jpg'
+import availabilityDashboard from '../assets/05-availability-dashboard.jpg'
 
 export function Lecture01ReliabilityBasicsSlide06ReliabilityAndAvailability() {
     const theme = useSlidesTheme()

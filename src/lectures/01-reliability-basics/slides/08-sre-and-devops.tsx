@@ -1,5 +1,5 @@
 import { Slide } from 'rlz-web-slides'
-import sreVsDevops from '../assets/08-sre-vs-devops.png'
+import sreVsDevops from '../assets/08-sre-vs-devops.jpg'
 
 export function Lecture01ReliabilityBasicsSlide08SreAndDevops() {
     return (

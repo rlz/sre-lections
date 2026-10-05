@@ -1,6 +1,6 @@
 import { Panel, useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
-import illustration from '../assets/02-dependency-boundary.png'
+import illustration from '../assets/02-dependency-boundary.jpg'
 
 export function Lecture04ReliableArchitectureSlide02DependencyBoundary() {
     const theme = useSlidesTheme()

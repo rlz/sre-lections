@@ -1,6 +1,6 @@
 import { Panel, useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
-import networkPartition from '../assets/11-cap-network-partition.png'
+import networkPartition from '../assets/11-cap-network-partition.jpg'
 
 export function Lecture03DistributedSystemsSlide11CapTradeoff() {
     const theme = useSlidesTheme()

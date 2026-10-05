@@ -1,7 +1,7 @@
 import { Panel, useSlidesTheme } from 'rlz-web-slides'
 
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
-import illustration from '../assets/03-dependency-errors.png'
+import illustration from '../assets/03-dependency-errors.jpg'
 
 export function Lecture04ReliableArchitectureSlide03DependencyErrors() {
     const theme = useSlidesTheme()

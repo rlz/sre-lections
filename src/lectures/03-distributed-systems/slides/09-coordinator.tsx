@@ -1,6 +1,6 @@
 import { Panel, useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
-import coordinator from '../assets/09-coordinator.png'
+import coordinator from '../assets/09-coordinator.jpg'
 
 export function Lecture03DistributedSystemsSlide09Coordinator() {
     const theme = useSlidesTheme()

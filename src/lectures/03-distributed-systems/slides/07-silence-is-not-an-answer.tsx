@@ -1,6 +1,6 @@
 import { Panel, useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
-import unsureServer from '../assets/06-server-unsure.png'
+import unsureServer from '../assets/06-server-unsure.jpg'
 
 export function Lecture03DistributedSystemsSlide07SilenceIsNotAnAnswer() {
     const theme = useSlidesTheme()

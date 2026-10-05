@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import { Panel, useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
-import reliabilityEngineer from '../assets/02-reliability-engineer.png'
+import reliabilityEngineer from '../assets/02-reliability-engineer.jpg'
 
 export function Lecture01ReliabilityBasicsSlide02Reliability() {
     const theme = useSlidesTheme()

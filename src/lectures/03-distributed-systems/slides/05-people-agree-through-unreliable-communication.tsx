@@ -1,6 +1,6 @@
 import { Panel, useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
-import familyPhones from '../assets/05-family-phones.png'
+import familyPhones from '../assets/05-family-phones.jpg'
 
 export function Lecture03DistributedSystemsSlide05PeopleAgreeThroughUnreliableCommunication() {
     const theme = useSlidesTheme()

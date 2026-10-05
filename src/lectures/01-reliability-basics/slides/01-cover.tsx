@@ -1,6 +1,6 @@
 import { LectureCoverSlide } from '../../../components/lecture-cover-slide'
 import { useSlidesTheme } from 'rlz-web-slides'
-import studyingStudent from '../assets/01-studying-student.png'
+import studyingStudent from '../assets/01-studying-student.jpg'
 
 export function Lecture01ReliabilityBasicsSlide01Cover() {
     const theme = useSlidesTheme()

@@ -1,6 +1,6 @@
 import { Panel, useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
-import outageUsersImage from '../assets/02-outage-users.png'
+import outageUsersImage from '../assets/02-outage-users.jpg'
 
 export function Lecture02FailuresAndReliabilityPrinciplesSlide02Failure() {
     const theme = useSlidesTheme()

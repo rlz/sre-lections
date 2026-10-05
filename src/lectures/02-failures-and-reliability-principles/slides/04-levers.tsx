@@ -1,9 +1,9 @@
 import { css } from '@emotion/react'
 import { Panel, useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
-import architectureWhiteboard from '../assets/03-architecture-whiteboard.png'
-import geoDistribution from '../assets/04-geo-distribution.png'
-import redRoom from '../assets/05-red-room.png'
+import architectureWhiteboard from '../assets/03-architecture-whiteboard.jpg'
+import geoDistribution from '../assets/04-geo-distribution.jpg'
+import redRoom from '../assets/05-red-room.jpg'
 
 export function Lecture02FailuresAndReliabilityPrinciplesSlide04Levers() {
     const theme = useSlidesTheme()

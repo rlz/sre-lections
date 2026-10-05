@@ -1,6 +1,6 @@
 import { Panel, useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
-import purchaseChain from '../assets/03-purchase-chain.png'
+import purchaseChain from '../assets/03-purchase-chain.jpg'
 
 export function Lecture01ReliabilityBasicsSlide03UserOutcome() {
     const theme = useSlidesTheme()
@@ -12,6 +12,7 @@ export function Lecture01ReliabilityBasicsSlide03UserOutcome() {
                     display: 'grid',
                     gridTemplateColumns: '1fr 1fr',
                     gridTemplateRows: '1fr auto',
+                    rowGap: theme.spacings.base,
                     columnGap: theme.spacing,
                     height: '100%'
                 }}
@@ -54,8 +55,7 @@ export function Lecture01ReliabilityBasicsSlide03UserOutcome() {
                 <div
                     css={{
                         gridRow: '2',
-                        gridColumn: '1 / 3',
-                        overflow: 'hidden'
+                        gridColumn: '1 / 3'
                     }}
                 >
                     <img
@@ -66,8 +66,7 @@ export function Lecture01ReliabilityBasicsSlide03UserOutcome() {
                             margin: '0 auto',
                             width: '70%',
                             height: 'auto',
-                            position: 'relative',
-                            top: -30
+                            borderRadius: theme.radii.base
                         }}
                     />
                 </div>

@@ -1,6 +1,6 @@
 import { Panel, useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
-import blackSwan from '../assets/08-black-swan.png'
+import blackSwan from '../assets/08-black-swan.jpg'
 
 export function Lecture02FailuresAndReliabilityPrinciplesSlide11BlackSwan() {
     const theme = useSlidesTheme()

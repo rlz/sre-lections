@@ -1,6 +1,6 @@
 import { Panel, useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
-import mobileUsers from '../assets/04-mobile-users.png'
+import mobileUsers from '../assets/04-mobile-users.jpg'
 
 export function Lecture03DistributedSystemsSlide04MobileApplicationIsPartOfTheSystem() {
     const theme = useSlidesTheme()
