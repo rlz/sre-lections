@@ -7,7 +7,7 @@ export const lecture04ReliableArchitecture: Lecture = {
     number: 4,
     title: 'Архитектура надёжных сервисов',
     summary:
-        'Зависимости, лимиты, исчерпаемые ресурсы и реакция на аномальную нагрузку.',
+        'Важные вещи, о которых надо помнить при проектировании архитектуры.',
     duration: '90 минут',
     status: 'available',
     Notes: Lecture04ReliableArchitectureNotes,
