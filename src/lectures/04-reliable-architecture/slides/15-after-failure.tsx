@@ -6,18 +6,37 @@ export function Lecture04ReliableArchitectureSlide15AfterFailure() {
 
     return (
         <LectureContentSlide number={4}>
-            <Panel
-                css={[
-                    { height: '100%', width: '100%', padding: 0 },
-                    theme.backgrounds.gradient('light')
-                ]}
+            <div
+                css={{
+                    display: 'grid',
+                    gridTemplateColumns: 'minmax(0, 1fr)',
+                    gridTemplateRows: 'auto minmax(0, 1fr)',
+                    height: '100%',
+                    minHeight: 0
+                }}
             >
-                <h1>Инструменты для работы с последствиями</h1>
+                <Panel
+                    css={[
+                        { gridColumn: '1', gridRow: '1 / 3' },
+                        theme.backgrounds.gradient('light')
+                    ]}
+                />
+                <h1
+                    css={{
+                        gridColumn: '1',
+                        gridRow: '1',
+                        padding: theme.spacings.half
+                    }}
+                >
+                    Инструменты для работы с последствиями
+                </h1>
                 <div
                     css={{
+                        gridColumn: '1',
+                        gridRow: '2',
                         display: 'grid',
                         gridTemplateColumns: '1fr 1fr',
-                        height: '100%'
+                        minHeight: 0
                     }}
                 >
                     <ul css={{ padding: theme.spacings.half }}>
@@ -34,12 +53,13 @@ export function Lecture04ReliableArchitectureSlide15AfterFailure() {
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            width: '100%',
-                            height: '100%',
+                            width: 'calc(100% - 8px)',
                             minHeight: 180,
                             padding: 16,
                             boxSizing: 'border-box',
-                            borderRadius: 8,
+                            margin: 4,
+                            borderRadius: theme.radius,
+                            ...theme.shadows.low,
                             background: '#d8d2f0',
                             color: '#343044',
                             textAlign: 'center'
@@ -51,7 +71,7 @@ export function Lecture04ReliableArchitectureSlide15AfterFailure() {
                         действия по сигналу.`
                     </div>
                 </div>
-            </Panel>
+            </div>
         </LectureContentSlide>
     )
 }

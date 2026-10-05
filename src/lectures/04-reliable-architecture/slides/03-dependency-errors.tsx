@@ -62,7 +62,7 @@ export function Lecture04ReliableArchitectureSlide03DependencyErrors() {
                             height: 'calc(100% - 24px)',
                             boxSizing: 'border-box',
                             margin: 12,
-                            borderRadius: theme.spacings.tight,
+                            borderRadius: theme.radius,
                             ...theme.shadows.low
                         }}
                     />

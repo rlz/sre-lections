@@ -1,6 +1,8 @@
+import { useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
 
 export function Lecture04ReliableArchitectureSlide10ReconnectStorm() {
+    const theme = useSlidesTheme()
     return (
         <LectureContentSlide number={4}>
             <div
@@ -8,12 +10,14 @@ export function Lecture04ReliableArchitectureSlide10ReconnectStorm() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    width: '100%',
-                    height: '100%',
+                    width: 'calc(100% - 8px)',
+                    height: 'calc(100% - 8px)',
+                    margin: 4,
                     minHeight: 180,
                     padding: 16,
                     boxSizing: 'border-box',
-                    borderRadius: 8,
+                    borderRadius: theme.radius,
+                    ...theme.shadows.low,
                     background: '#d8d2f0',
                     color: '#343044',
                     textAlign: 'center'

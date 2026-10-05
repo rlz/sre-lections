@@ -7,19 +7,38 @@ export function Lecture04ReliableArchitectureSlide11FiniteResources() {
 
     return (
         <LectureContentSlide number={4}>
-            <Panel
-                css={[
-                    { height: '100%', width: '100%', padding: 0 },
-                    theme.backgrounds.gradient('light')
-                ]}
+            <div
+                css={{
+                    display: 'grid',
+                    gridTemplateColumns: 'minmax(0, 1fr)',
+                    gridTemplateRows: 'auto minmax(0, 1fr)',
+                    height: '100%',
+                    minHeight: 0
+                }}
             >
-                <h1>Исчерпаться может любой конечный ресурс</h1>
+                <Panel
+                    css={[
+                        { gridColumn: '1', gridRow: '1 / 3' },
+                        theme.backgrounds.gradient('light')
+                    ]}
+                />
+                <h1
+                    css={{
+                        gridColumn: '1',
+                        gridRow: '1',
+                        padding: theme.spacings.half
+                    }}
+                >
+                    Исчерпаться может любой конечный ресурс
+                </h1>
                 <div
                     css={{
+                        gridColumn: '1',
+                        gridRow: '2',
                         display: 'grid',
                         gridTemplateColumns: '1fr 1fr',
                         gap: theme.spacing,
-                        height: '100%'
+                        minHeight: 0
                     }}
                 >
                     <ul css={{ padding: theme.spacings.half }}>
@@ -34,7 +53,7 @@ export function Lecture04ReliableArchitectureSlide11FiniteResources() {
                         AWS не мог резолвить записи с таким количеством адресов.
                     </p>
                 </div>
-            </Panel>
+            </div>
         </LectureContentSlide>
     )
 }

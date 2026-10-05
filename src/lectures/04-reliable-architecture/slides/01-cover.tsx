@@ -30,7 +30,8 @@ export function Lecture04ReliableArchitectureSlide01Cover() {
                         maxHeight: '55%',
                         boxSizing: 'border-box',
                         margin: 4,
-                        borderRadius: theme.radius
+                        borderRadius: theme.radius,
+                        ...theme.shadows.low
                     }}
                 />
                 <div css={{ padding: theme.spacings.half }}>

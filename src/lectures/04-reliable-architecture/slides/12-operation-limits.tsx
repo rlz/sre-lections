@@ -7,18 +7,36 @@ export function Lecture04ReliableArchitectureSlide12OperationLimits() {
 
     return (
         <LectureContentSlide number={4}>
-            <Panel
-                css={[
-                    { height: '100%', width: '100%', padding: 0 },
-                    theme.backgrounds.gradient('light')
-                ]}
+            <div
+                css={{
+                    display: 'grid',
+                    gridTemplateColumns: 'minmax(0, 1fr)',
+                    gridTemplateRows: 'auto minmax(0, 1fr)',
+                    height: '100%',
+                    minHeight: 0
+                }}
             >
-                <h1>Задумайтесь о лимитах</h1>
+                <Panel
+                    css={[
+                        { gridColumn: '1', gridRow: '1 / 3' },
+                        theme.backgrounds.gradient('light')
+                    ]}
+                />
+                <h1
+                    css={{
+                        gridColumn: '1',
+                        gridRow: '1',
+                        padding: theme.spacings.half
+                    }}
+                >
+                    Задумайтесь о лимитах
+                </h1>
                 <div
                     css={{
+                        gridColumn: '1',
+                        gridRow: '2',
                         display: 'grid',
                         gridTemplateColumns: '1fr 1fr',
-                        height: '100%',
                         minHeight: 0
                     }}
                 >
@@ -66,7 +84,7 @@ export function Lecture04ReliableArchitectureSlide12OperationLimits() {
                         </ul>
                     </div>
                 </div>
-            </Panel>
+            </div>
         </LectureContentSlide>
     )
 }
