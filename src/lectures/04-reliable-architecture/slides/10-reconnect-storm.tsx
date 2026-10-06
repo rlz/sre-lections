@@ -1,33 +1,21 @@
 import { useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
+import reconnectStormImage from '../assets/10-reconnect-storm.jpg'
 
 export function Lecture04ReliableArchitectureSlide10ReconnectStorm() {
     const theme = useSlidesTheme()
     return (
         <LectureContentSlide number={4}>
-            <div
+            <img
+                src={reconnectStormImage}
+                alt="Неподвижные банкоматы в разных местах звонят серверу по смартфонам, пока клиенты ждут ответа; в датацентре сервер лежит на полу среди звонящих смартфонов"
                 css={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    width: 'calc(100% - 8px)',
-                    height: 'calc(100% - 8px)',
-                    margin: 4,
-                    minHeight: 180,
-                    padding: 16,
                     boxSizing: 'border-box',
                     borderRadius: theme.radius,
                     ...theme.shadows.low,
-                    background: '#d8d2f0',
-                    color: '#343044',
-                    textAlign: 'center'
+                    display: 'block'
                 }}
-            >
-                <strong>Иллюстрация будет здесь</strong>
-                <br />
-                `В центре сервер-персонаж упал и лежит. Вокруг него персонажи
-                банкоматы.`
-            </div>
+            />
         </LectureContentSlide>
     )
 }

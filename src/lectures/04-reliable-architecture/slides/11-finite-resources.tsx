@@ -7,53 +7,80 @@ export function Lecture04ReliableArchitectureSlide11FiniteResources() {
 
     return (
         <LectureContentSlide number={4}>
-            <div
-                css={{
-                    display: 'grid',
-                    gridTemplateColumns: 'minmax(0, 1fr)',
-                    gridTemplateRows: 'auto minmax(0, 1fr)',
-                    height: '100%',
-                    minHeight: 0
-                }}
+            <Panel
+                padding={0}
+                css={[
+                    {
+                        display: 'grid',
+                        gridTemplateColumns: '1fr 1fr',
+                        gridTemplateRows: '0.4fr 1fr',
+                        height: '100%'
+                    },
+                    theme.backgrounds.gradient('light')
+                ]}
             >
-                <Panel
-                    css={[
-                        { gridColumn: '1', gridRow: '1 / 3' },
-                        theme.backgrounds.gradient('light')
-                    ]}
-                />
-                <h1
+                <div
                     css={{
-                        gridColumn: '1',
+                        gridColumn: '1 / 3',
                         gridRow: '1',
                         padding: theme.spacings.half
                     }}
                 >
-                    Исчерпаться может любой конечный ресурс
-                </h1>
-                <div
-                    css={{
-                        gridColumn: '1',
-                        gridRow: '2',
-                        display: 'grid',
-                        gridTemplateColumns: '1fr 1fr',
-                        gap: theme.spacing,
-                        minHeight: 0
-                    }}
-                >
-                    <ul css={{ padding: theme.spacings.half }}>
-                        <li>
-                            Память, диск, очередь, кэш, пул соединений, файловые
-                            дескрипторы, порты и др.
-                        </li>
-                    </ul>
-                    <p css={{ padding: theme.spacings.half }}>
-                        Однажды добавили серверов и получили сбой у партнеров,
-                        которые работали с AWS. Оказалось, что DNS-рехолвер в
-                        AWS не мог резолвить записи с таким количеством адресов.
-                    </p>
+                    <h1>Следим за исчерпаемыми ресурсами</h1>
+                    <p>Их наудивление много и много неожиданных</p>
                 </div>
-            </div>
+                <Panel
+                    css={[
+                        {
+                            margin: 4,
+                            gridColumn: '1 / 3',
+                            gridRow: '2'
+                        },
+                        theme.backgrounds.gradient('accent-1')
+                    ]}
+                >
+                    <h2>Примеры</h2>
+                    <ul>
+                        <li>Память</li>
+                        <li>диск</li>
+                        <li>очередь</li>
+                        <li>кэш</li>
+                        <li>пулы соединений</li>
+                        <li>пулы потоков</li>
+                        <li>файловые дескрипторы</li>
+                        <li>порты</li>
+                    </ul>
+                </Panel>
+                <Panel
+                    css={[
+                        {
+                            margin: 8,
+                            marginLeft: 0,
+                            gridColumn: '2',
+                            gridRow: '2'
+                        },
+                        theme.backgrounds.gradient('accent-2')
+                    ]}
+                >
+                    <h2>Отказ у партнеров в AWS</h2>
+                    <p>
+                        Однажды мы масштабировали сервис, добавили серверов и
+                        добавили их адреса в DNS запись. Процедура обычная и
+                        много раз совершаемая до этого.
+                    </p>
+                    <p>
+                        Но один раз нам стали жаловаться клиенты, что мы для них
+                        стали недоступны. Но у других все работало и связать с
+                        нашими действиями это було сложно.
+                    </p>
+                    <p>
+                        Оказалось, что пострадали только партнеры, которые
+                        хостились в AWS. DNS-резолвер в AWS не поддерживал такое
+                        количество адресов в одной записи, хотя остальные
+                        работали.
+                    </p>
+                </Panel>
+            </Panel>
         </LectureContentSlide>
     )
 }
