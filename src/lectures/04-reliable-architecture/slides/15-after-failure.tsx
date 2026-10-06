@@ -53,22 +53,26 @@ export function Lecture04ReliableArchitectureSlide15AfterFailure() {
                         <li>очистки очередей</li>
                     </ul>
                 </div>
-                <img
-                    src={afterFailureImage}
-                    alt="Команда в серверной слаженно отрабатывает учебную пожарную тревогу"
+                <div
                     css={{
                         gridColumn: '2',
                         gridRow: '2 / 5',
-                        display: 'block',
-                        width: 'calc(100% - 16px)',
-                        height: 'auto',
-                        alignSelf: 'center',
                         margin: 8,
-                        borderRadius: theme.radius,
-                        ...theme.shadows.low,
-                        background: '#d8d2f0'
+                        display: 'flex',
+                        justifyContent: 'flex-end',
+                        alignItems: 'flex-end'
                     }}
-                />
+                >
+                    <img
+                        src={afterFailureImage}
+                        alt="Команда в серверной слаженно отрабатывает учебную пожарную тревогу"
+                        css={{
+                            width: '100%',
+                            borderRadius: theme.radius,
+                            ...theme.shadows.low
+                        }}
+                    />
+                </div>
             </Panel>
         </LectureContentSlide>
     )

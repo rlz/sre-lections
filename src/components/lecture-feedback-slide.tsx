@@ -40,7 +40,7 @@ export function LectureFeedbackSlide({ number }: LectureFeedbackSlideProps) {
                             gridRow: '1',
                             display: 'flex',
                             alignItems: 'center',
-                            margin: 8
+                            margin: 4
                         }
                     ]}
                 >

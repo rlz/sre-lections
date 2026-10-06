@@ -82,23 +82,26 @@ export function Lecture04ReliableArchitectureSlide14LoadTesting() {
                         инициализация — медленной
                     </p>
                 </div>
-
-                <img
-                    src={loadTesting}
-                    alt="Временная диаграмма: рабочий максимум, пик нагрузки в 3–5 раз и восстановление"
+                <div
                     css={{
                         gridColumn: '2',
                         gridRow: '2 / 5',
-                        display: 'block',
-                        width: 'calc(100% - 16px)',
-                        height: 'auto',
-                        alignSelf: 'center',
                         margin: 8,
-                        borderRadius: theme.radius,
-                        ...theme.shadows.low,
-                        background: '#d8d2f0'
+                        display: 'flex',
+                        justifyContent: 'flex-end',
+                        alignItems: 'flex-end'
                     }}
-                />
+                >
+                    <img
+                        src={loadTesting}
+                        alt="Временная диаграмма: рабочий максимум, пик нагрузки в 3–5 раз и восстановление"
+                        css={{
+                            width: '100%',
+                            borderRadius: theme.radius,
+                            ...theme.shadows.low
+                        }}
+                    />
+                </div>
             </Panel>
         </LectureContentSlide>
     )

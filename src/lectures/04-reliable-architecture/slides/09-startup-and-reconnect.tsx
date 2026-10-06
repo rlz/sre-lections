@@ -96,22 +96,26 @@ export function Lecture04ReliableArchitectureSlide09StartupAndReconnect() {
                         ограниченной частотой
                     </strong>
                 </div>
-                <img
-                    src={startupAndReconnectImage}
-                    alt="Илон Маск нажимает большую красную кнопку запуска, а за окном взрывается ракета"
+                <div
                     css={{
                         gridColumn: '2',
                         gridRow: '2 / 6',
-                        display: 'block',
-                        width: 'calc(100% - 32px)',
-                        height: 'auto',
-                        alignSelf: 'center',
                         margin: 16,
-                        borderRadius: theme.radius,
-                        ...theme.shadows.low,
-                        background: '#d8d2f0'
+                        display: 'flex',
+                        justifyContent: 'flex-end',
+                        alignItems: 'flex-end'
                     }}
-                />
+                >
+                    <img
+                        src={startupAndReconnectImage}
+                        alt="Илон Маск нажимает большую красную кнопку запуска, а за окном взрывается ракета"
+                        css={{
+                            width: '100%',
+                            borderRadius: theme.radius,
+                            ...theme.shadows.low
+                        }}
+                    />
+                </div>
             </Panel>
         </LectureContentSlide>
     )

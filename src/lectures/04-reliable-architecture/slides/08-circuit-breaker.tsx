@@ -92,22 +92,26 @@ export function Lecture04ReliableArchitectureSlide08CircuitBreaker() {
                         смещением
                     </strong>
                 </div>
-                <img
-                    src={circuitBreakerImage}
-                    alt="Касса закрыта на технический перерыв; посетители спокойно ждут в стороне"
+                <div
                     css={{
                         gridColumn: '2',
                         gridRow: '2 / 6',
-                        display: 'block',
-                        width: 'calc(100% - 32px)',
-                        height: 'auto',
-                        alignSelf: 'center',
                         margin: 16,
-                        borderRadius: theme.radius,
-                        ...theme.shadows.low,
-                        background: '#d8d2f0'
+                        display: 'flex',
+                        justifyContent: 'flex-end',
+                        alignItems: 'flex-end'
                     }}
-                />
+                >
+                    <img
+                        src={circuitBreakerImage}
+                        alt="Касса закрыта на технический перерыв; посетители спокойно ждут в стороне"
+                        css={{
+                            width: '100%',
+                            borderRadius: theme.radius,
+                            ...theme.shadows.low
+                        }}
+                    />
+                </div>
             </Panel>
         </LectureContentSlide>
     )
