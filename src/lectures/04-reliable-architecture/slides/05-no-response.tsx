@@ -1,61 +1,46 @@
 import { Panel, useSlidesTheme } from 'rlz-web-slides'
 import { LectureContentSlide } from '../../../components/lecture-content-slide'
+import noResponseImage from '../assets/05-no-response.jpg'
 
 export function Lecture04ReliableArchitectureSlide05NoResponse() {
     const theme = useSlidesTheme()
 
     return (
         <LectureContentSlide number={4}>
-            <div
-                css={{
-                    display: 'grid',
-                    gridTemplateColumns: 'minmax(0, 1fr)',
-                    gridTemplateRows: 'auto minmax(0, 1fr)',
-                    height: '100%',
-                    minHeight: 0
-                }}
+            <Panel
+                padding={0}
+                css={[
+                    {
+                        display: 'flex',
+                        height: '100%',
+                        gap: theme.spacings.half
+                    },
+                    theme.backgrounds.gradient('light')
+                ]}
             >
-                <Panel
-                    css={[
-                        { gridColumn: '1', gridRow: '1 / 3' },
-                        theme.backgrounds.gradient('light')
-                    ]}
-                />
-                <h1
+                <div
                     css={{
-                        gridColumn: '1',
-                        gridRow: '1',
+                        flex: 1,
                         padding: theme.spacings.half
                     }}
                 >
-                    Зависимость может вообще не отвечать
-                </h1>
-                <div
+                    <h1>Зависимость может вообще не отвечать</h1>
+                </div>
+                <img
+                    src={noResponseImage}
+                    alt="Сервер сидит спиной в датацентре и не отвечает на запросы"
                     css={{
-                        gridColumn: '1',
-                        gridRow: '2',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        width: 'calc(100% - 8px)',
+                        flex: '0 1 auto',
+                        width: 'auto',
+                        height: 'calc(100% - 8px)',
+                        maxWidth: 'calc(100% - 8px)',
                         margin: 4,
-                        minHeight: 180,
-                        padding: 16,
                         boxSizing: 'border-box',
                         borderRadius: theme.radius,
-                        ...theme.shadows.low,
-                        background: '#d8d2f0',
-                        color: '#343044',
-                        textAlign: 'center'
+                        ...theme.shadows.low
                     }}
-                >
-                    <strong>Иллюстрация будет здесь</strong>
-                    <span>
-                        `Сервер в виде персонажа сидит в датацентре к нам спиной
-                        с очень обиженным видом — он с нами не разговаривает.`
-                    </span>
-                </div>
-            </div>
+                />
+            </Panel>
         </LectureContentSlide>
     )
 }
