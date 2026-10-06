@@ -67,8 +67,8 @@ export function Lecture04ReliableArchitectureSlide09StartupAndReconnect() {
                     }}
                 >
                     <p>
-                        Стартуем даже если зависимости недоступны (даже, если
-                        недоступна база данных)
+                        Стартуем, даже если зависимости недоступны (в том числе
+                        база данных)
                     </p>
                 </div>
                 <div

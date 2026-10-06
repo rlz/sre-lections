@@ -24,7 +24,7 @@ export function Lecture04ReliableArchitectureSlide06Timeouts() {
                         flex: 1
                     }}
                 >
-                    <h1>Таймауты сложнее чем кажутся</h1>
+                    <h1>Таймауты сложнее, чем кажутся</h1>
                     <ul>
                         <li>Таймауты на установку соединения</li>
                         <li>Таймаут на вызов</li>

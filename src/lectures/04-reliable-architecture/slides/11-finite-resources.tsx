@@ -27,7 +27,7 @@ export function Lecture04ReliableArchitectureSlide11FiniteResources() {
                     }}
                 >
                     <h1>Следим за исчерпаемыми ресурсами</h1>
-                    <p>Их наудивление много и много неожиданных</p>
+                    <p>Их на удивление много, и многие из них неожиданны</p>
                 </div>
                 <Panel
                     css={[
@@ -48,7 +48,7 @@ export function Lecture04ReliableArchitectureSlide11FiniteResources() {
                 >
                     <h2>Примеры</h2>
                     <ul>
-                        <li>Память</li>
+                        <li>память</li>
                         <li>диск</li>
                         <li>очередь</li>
                         <li>кэш</li>

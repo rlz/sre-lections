@@ -23,8 +23,8 @@ export function Lecture04ReliableArchitectureSlide03DependencyErrors() {
                 <div css={{ padding: theme.spacings.half, flex: 1 }}>
                     <h1>Зависимость отвечает ошибкой</h1>
                     <p>
-                        Наш сервис должен быть готов, что на его вызовы сервисы
-                        ответят ошибкой.
+                        Наш сервис должен быть готов к тому, что зависимые
+                        сервисы могут ответить на его вызовы ошибкой.
                     </p>
                 </div>
                 <div

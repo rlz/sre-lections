@@ -65,7 +65,7 @@ export function Lecture04ReliableArchitectureSlide08CircuitBreaker() {
                         padding: theme.spacings.half
                     }}
                 >
-                    <p>При массовых ошибках, остановите поток</p>
+                    <p>При массовых ошибках остановите поток</p>
                 </div>
                 <div
                     css={{
