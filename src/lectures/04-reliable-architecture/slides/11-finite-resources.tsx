@@ -13,7 +13,7 @@ export function Lecture04ReliableArchitectureSlide11FiniteResources() {
                     {
                         display: 'grid',
                         gridTemplateColumns: '1fr 1fr',
-                        gridTemplateRows: '0.4fr 1fr',
+                        gridTemplateRows: '0.35fr 1fr',
                         height: '100%'
                     },
                     theme.backgrounds.gradient('light')
@@ -38,6 +38,13 @@ export function Lecture04ReliableArchitectureSlide11FiniteResources() {
                         },
                         theme.backgrounds.gradient('accent-1')
                     ]}
+                ></Panel>
+                <div
+                    css={{
+                        gridColumn: '1',
+                        gridRow: '2',
+                        padding: theme.spacings.half
+                    }}
                 >
                     <h2>Примеры</h2>
                     <ul>
@@ -50,7 +57,7 @@ export function Lecture04ReliableArchitectureSlide11FiniteResources() {
                         <li>файловые дескрипторы</li>
                         <li>порты</li>
                     </ul>
-                </Panel>
+                </div>
                 <Panel
                     css={[
                         {
@@ -64,20 +71,19 @@ export function Lecture04ReliableArchitectureSlide11FiniteResources() {
                 >
                     <h2>Отказ у партнеров в AWS</h2>
                     <p>
-                        Однажды мы масштабировали сервис, добавили серверов и
-                        добавили их адреса в DNS запись. Процедура обычная и
-                        много раз совершаемая до этого.
+                        Мы масштабировали сервис: добавили серверы и внесли их
+                        адреса в DNS-запись. Раньше мы уже делали это много раз
+                        без проблем.
                     </p>
                     <p>
-                        Но один раз нам стали жаловаться клиенты, что мы для них
-                        стали недоступны. Но у других все работало и связать с
-                        нашими действиями это було сложно.
+                        Позже клиенты стали сообщать, что сервис недоступен. При
+                        этом у остальных всё работало, поэтому связать сбой с
+                        обновлением DNS было непросто.
                     </p>
                     <p>
-                        Оказалось, что пострадали только партнеры, которые
-                        хостились в AWS. DNS-резолвер в AWS не поддерживал такое
-                        количество адресов в одной записи, хотя остальные
-                        работали.
+                        Выяснилось, что проблемы возникли только у партнёров,
+                        размещённых в AWS. Их DNS-резолвер не поддерживал такое
+                        количество адресов в одной записи.
                     </p>
                 </Panel>
             </Panel>

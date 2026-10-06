@@ -10,60 +10,88 @@ export function Lecture04ReliableArchitectureSlide13AnomalousLoad() {
             <div
                 css={{
                     display: 'grid',
-                    gridTemplateColumns: 'minmax(0, 1fr)',
-                    gridTemplateRows: 'auto minmax(0, 1fr)',
                     height: '100%',
-                    minHeight: 0
+                    gridTemplateColumns: '1fr 1fr',
+                    gridTemplateRows: '2fr 1fr 1fr'
                 }}
             >
+                <Panel css={{ gridRow: '1 / 4', gridColumn: '1 / 3' }} />
                 <Panel
                     css={[
-                        { gridColumn: '1', gridRow: '1 / 3' },
-                        theme.backgrounds.gradient('light')
+                        { gridRow: '2 / 4', gridColumn: '1 / 3', margin: 4 },
+                        theme.backgrounds.gradient('neutral')
                     ]}
                 />
-                <h1
+                <div
                     css={{
-                        gridColumn: '1',
                         gridRow: '1',
+                        gridColumn: '1 / 3',
                         padding: theme.spacings.half
                     }}
                 >
-                    Работа под аномальной нагрузкой
-                </h1>
+                    <h1>Дизайн работы под аномальной нагрузкой</h1>
+                </div>
                 <div
                     css={{
-                        gridColumn: '1',
                         gridRow: '2',
-                        display: 'grid',
-                        gridTemplateColumns: '1fr',
-                        gap: theme.spacing,
-                        minHeight: 0
+                        gridColumn: '1',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        padding: theme.spacings.half,
+                        color: theme.colors.textLight,
+                        margin: 8
                     }}
                 >
-                    <div>
-                        <p css={{ padding: theme.spacings.half }}>
-                            Под аномальной нагрузкой сервис должен отказывать
-                            контролируемо
-                        </p>
-                        <p css={{ padding: theme.spacings.half }}>
-                            Ограничьте частоту запросов и размер очереди, пока
-                            ресурсы ещё доступны
-                        </p>
-                        <p css={{ padding: theme.spacings.half }}>
-                            После восстановления удалите работу, которая уже
-                            потеряла смысл
-                        </p>
-                        <Panel
-                            css={[
-                                { margin: 4 },
-                                theme.backgrounds.gradient('accent-1')
-                            ]}
-                        >
-                            Например, не отправляйте временный пароль после
-                            истечения его срока
-                        </Panel>
-                    </div>
+                    Под аномальной нагрузкой сервис должен отказывать
+                    контролируемо
+                </div>
+                <Panel
+                    css={[
+                        {
+                            gridRow: '2',
+                            gridColumn: '2',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            margin: 8
+                        },
+                        theme.backgrounds.gradient('accent-1')
+                    ]}
+                >
+                    Ограничьте частоту запросов и размер очереди, пока ресурсы
+                    ещё доступны
+                </Panel>
+                <Panel
+                    css={[
+                        {
+                            gridRow: '3',
+                            gridColumn: '1',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            margin: 8
+                        },
+                        theme.backgrounds.gradient('accent-2')
+                    ]}
+                >
+                    После восстановления удалите работу, которая уже потеряла
+                    смысл
+                </Panel>
+                <div
+                    css={{
+                        gridRow: '3',
+                        gridColumn: '2',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        padding: theme.spacings.half,
+                        color: theme.colors.textLight,
+                        margin: 8
+                    }}
+                >
+                    Например, не отправляйте временный пароль после истечения
+                    его срока
                 </div>
             </div>
         </LectureContentSlide>
