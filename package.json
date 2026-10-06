@@ -14,12 +14,14 @@
         "format:check": "prettier --check ."
     },
     "dependencies": {
+        "@fortawesome/free-solid-svg-icons": "^7.3.1",
+        "@fortawesome/react-fontawesome": "^3.5.0",
         "@emotion/react": "^11.14.0",
         "@emotion/styled": "^11.14.1",
         "colord": "^2.10.0",
         "react": "^19.2.8",
         "react-dom": "^19.2.8",
-        "rlz-web-slides": "^0.1.1"
+        "rlz-web-slides": "^0.1.2"
     },
     "devDependencies": {
         "@mdx-js/rollup": "^3.1.1",

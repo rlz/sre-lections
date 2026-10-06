@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { Presentation } from 'rlz-web-slides'
 import authorPhoto from './assets/dmitry-maslennikov.jpg'
 import telegramQr from './assets/telegram-sre-pub-qr.svg'
@@ -149,7 +151,7 @@ function LecturePage({ lecture }: { lecture: Lecture }) {
                                 : 'Список лекций'
                         }
                     >
-                        ←
+                        <FontAwesomeIcon icon={faArrowLeft} />
                     </a>
                     {nextLecture ? (
                         <a
@@ -157,10 +159,12 @@ function LecturePage({ lecture }: { lecture: Lecture }) {
                             aria-label={`Следующая: лекция ${nextLecture.number}`}
                             title={`Лекция ${nextLecture.number}`}
                         >
-                            →
+                            <FontAwesomeIcon icon={faArrowRight} />
                         </a>
                     ) : (
-                        <span aria-hidden="true">→</span>
+                        <span aria-hidden="true">
+                            <FontAwesomeIcon icon={faArrowRight} />
+                        </span>
                     )}
                 </nav>
             </header>
