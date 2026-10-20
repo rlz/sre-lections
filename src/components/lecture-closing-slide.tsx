@@ -21,21 +21,38 @@ export function LectureClosingSlide({
                 css={{
                     display: 'grid',
                     height: '100%',
+                    width: '100%',
                     gridTemplateColumns: '1fr 1fr',
                     gap: theme.spacing,
-                    alignItems: 'center'
+                    alignItems: 'center',
+                    minWidth: 0
                 }}
             >
                 <div
                     css={{
-                        alignSelf: 'end',
-                        paddingBottom: theme.spacings.half
+                        gridColumn: '1',
+                        gridRow: '1',
+                        display: 'flex',
+                        alignItems: 'center',
+                        padding: theme.spacings.half,
+                        minWidth: 0
                     }}
                 >
-                    <h1>На этом пока всё! Вопросы?</h1>
+                    <h1
+                        css={{
+                            margin: 0,
+                            maxWidth: '12ch',
+                            color: '#102235',
+                            fontSize: '3em'
+                        }}
+                    >
+                        На этом пока всё! Вопросы?
+                    </h1>
                 </div>
                 <div
                     css={{
+                        gridColumn: '2',
+                        gridRow: '1',
                         display: 'flex',
                         height: '100%',
                         alignItems: 'center',
